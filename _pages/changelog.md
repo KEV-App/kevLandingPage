@@ -23,14 +23,14 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 #### What’s New:
 We update the app regularly so we can make it better for you.
 
-• Added Tap-to-focus Indicator.
+* Added Tap-to-focus Indicator.
 
-• User interface enhancements.
+* User interface enhancements.
 
 
 #### Fixed:
 
-• Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
+* Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
 
 
 ## Version 4.2
