@@ -11,9 +11,8 @@ presskit_download_link: # Enter a link to downloadable file or (e.g. public Drop
 app_icon: # assets/appicon.png  # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description: |
-  KEV turns your iPhone or iPad into a professional and easy-to-use light meter. Minimalistic KEV analyzes live preview of the scene and gives you accurate white balance data in Kelvin.
-
+app_description: KEV turns your iPhone or iPad into a professional and easy-to-use light meter. Minimalistic KEV analyzes live preview of the scene and gives you accurate white balance data in Kelvin.
+app_testimony: Tested in a number of different environments... outside areas, low light areas and the app provides an accurate white balance number to input into cameras white balance.
 enable_smart_app_banner: true # Set to true to show a smart app banner at top of page on mobile devices.
 
 # Information About Yourself
