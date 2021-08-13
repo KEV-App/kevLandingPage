@@ -35,11 +35,11 @@ features:
 
   - title: Compensation and Calculation
     description: Ability to compensate and calculate the white balance readings.
-    fontawesome_icon_name: bell-slash
+    fontawesome_icon_name: calculator
 
   - title: Integral
     description: Minimal yet integral point and shoot capability. A go-to light meter for photographers and videographers.
-    fontawesome_icon_name: wrench
+    fontawesome_icon_name: star
 
 # Theme Settings
 topbar_color: "#fff"
