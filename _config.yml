@@ -31,7 +31,7 @@ youtube_username:
 features:
   - title: Real-time Temperature
     description: Gets you color temperature in Kelvin in real-time.
-    fontawesome_icon_name: hourglass-start
+    fontawesome_icon_name: fa-thermometer-full
 
   - title: Compensation and Calculation
     description: Ability to compensate and calculate the white balance readings.
