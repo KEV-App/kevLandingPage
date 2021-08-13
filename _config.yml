@@ -50,7 +50,7 @@ cover_image: # Replace with alternative image path or image URL.
 cover_overlay_color: "#ffffff"
 cover_overlay_transparency: 1.0
 
-device_color: black # Set to: blue, black, yellow, coral or white.
+device_color: yellow # Set to: blue, black, yellow, coral or white.
 
 body_background_color: "#F8F8F8"
 
