@@ -12,33 +12,33 @@ app_icon: # assets/appicon.png  # Automatically populates if not set and if iOS 
 app_name: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_description: |
-  Get through your tasks by putting your phone away. To start the timer put your device on the table screen facing down. When the timer finishes you will hear a chime. Enjoy your break and restart when you’re ready again!
+  KEV turns your iPhone or iPad into a professional and easy-to-use light meter. Minimalistic KEV analyzes live preview of the scene and gives you accurate white balance data in Kelvin.
 
 enable_smart_app_banner: true # Set to true to show a smart app banner at top of page on mobile devices.
 
 # Information About Yourself
-your_name: Dan Kim
-your_link: https://dankim.io
+your_name: Satnam Singh
+your_link: https://kevapp.co/
 your_city:
 email_address:
 facebook_username:
-instagram_username: dankimio
-twitter_username: dankimio
+instagram_username: codetard
+twitter_username: codetard
 github_username: dankimio
 youtube_username:
 
 # Feature List (Edit, add or remove features to be presented.)
 features:
-  - title: Productivity Timer
-    description: Break up your work into intervals. Work on your tasks. Don't forget to take breaks.
+  - title: Real-time Temperature
+    description: Gets you color temperature in Kelvin in real-time.
     fontawesome_icon_name: hourglass-start
 
-  - title: Put Your Phone Away
-    description: Put your phone on the table screen facing down. No distractions.
+  - title: Compensation and Calculation
+    description: Ability to compensate and calculate the white balance readings.
     fontawesome_icon_name: bell-slash
 
-  - title: Dark Mode, Customization and More
-    description: Custom timer length, dark mode and more to come. Stay tuned!
+  - title: Integral
+    description: Minimal yet integral point and shoot capability. A go-to light meter for photographers and videographers.
     fontawesome_icon_name: wrench
 
 # Theme Settings
