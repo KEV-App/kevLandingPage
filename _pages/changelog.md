@@ -18,22 +18,74 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
 
-## Version 1.2
+## Version 4.3
 
 #### What’s New:
+We update the app regularly so we can make it better for you.
 
-* Strict mode: resets the timer if you’re distracted.
-* 5 minute timer interval: useful for short breaks.
+• Added Tap-to-focus Indicator.
 
-## Version 1.1
+• User interface enhancements.
 
-#### What’s New:
-
-* Now you can choose timer length. Select your preference by tapping on the timer label.
 
 #### Fixed:
 
-* The timer will no longer start in the settings screen.
+• Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
+
+
+## Version 4.2
+
+#### What’s New:
+
+We update the app regularly so we can make it better for you.
+
+
+## Version 4.1
+
+#### What’s New:
+
+We update the app regularly so we can make it better for you.
+
+* Crash fixes
+
+* Grid fix
+
+* Better calibration
+
+
+#### Fixed:
+
+* Crash fixes.
+
+## Version 3.0
+
+#### What’s New:
+
+We update the app regularly so we can make it better for you.
+
+* Improved WB algorithm.
+
+* Better user experience.
+
+
+#### Fixed:
+
+* Crash fixes.
+
+## Version 2.0
+#### What’s New:
+
+We update the app regularly so we can make it better for you.
+
+
+* Added manual tap-to-focus.
+
+* Improved White Balance algorithm.
+
+
+#### Fixed:
+
+* We have updated the app to fix some crashes and make features load faster.
 
 ## Version 1.0
 
