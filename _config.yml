@@ -1,5 +1,3 @@
-plugins:
-  - jekyll-seo-tag
 # page title
 page_title: # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
@@ -91,3 +89,5 @@ collections:
 
 # Markdown rendering
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
