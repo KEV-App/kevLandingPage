@@ -18,11 +18,89 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
 
-## Version 5.0
+## Version 6.0
 
 #### What’s New:
 
-Hey there! We've been working hard on making KEV even better for you.
+* Redesigned User Interface.
+
+* Redesigned App Icon.
+
+* Fixed an issue where compensation wasn't working.
+
+* Added ability to zoom.
+
+* Introducing KEV WatchOS App, it's a companion app that shares real-time data from iOS app to Watch app.
+
+* Fixed a bug that we hope you never encountered.
+
+* Added yellow brackets on the camera grid that indicated when the app is ready to take reading.
+
+* Added a section for 'Request a feature'.
+
+
+## Version 5.6
+
+#### What’s New:
+
+* KEV's got a better app icon.
+
+* Fixed a bug that we hope you never encountered.
+
+
+## Version 5.5
+
+#### What’s New:
+
+* Added how-to-use videos by Phillip Riley, a YouTuber & Ryan, a Real Estate Photographer, for better understanding of the app.
+
+* Fixed a bug that we hope you never encountered.
+
+
+## Version 5.4
+
+#### What’s New:
+
+* Stunning landscape mode for iPhone and iPad.
+
+* Shadowed text and labels, better text visibility in bright and light environments.
+
+
+## Version 5.3
+
+#### What’s New:
+
+
+* Introducing Correlated Colour Temperature(CCT).
+
+* New app icon, now better and cooler.
+
+* Redesigned user interface, meter has now bigger and bolder font.
+
+
+## Version 5.2
+
+#### What’s New:
+
+* Added color temperature description. Now app tells you if the temperature is warm or cold with description for lighting condition.
+
+* Now we are also discoverable in the Thai language.
+
+
+## Version 5.1
+
+#### What’s New:
+
+* Redesigned app icon, KEV is now colorful.
+
+* KEV is now also discoverable in the Polish language.
+
+* We fixed a bug that you probably never encountered.
+
+
+## Version 5.0
+
+#### What’s New:
 
 * Now capture pixel perfect, high resolution snapshots.
 
@@ -33,7 +111,7 @@ Hey there! We've been working hard on making KEV even better for you.
 
 #### What’s New:
 
-Hey there! We've been working hard on making KEV even better for you. In addition to our usual bug fixes and improvements, we've tinkered under the hood to speed up our white balance algorithm.
+* We've been working hard on making KEV even better for you. In addition to our usual bug fixes and improvements, we've tinkered under the hood to speed up our white balance algorithm.
 
 
 ## Version 4.5
@@ -49,9 +127,6 @@ We are working hard to meet your expectations. Also, we brought a ton of new fea
 * Now capture, save and share scene snapshots with color temperature and geolocation readings.
 
 * KEV is now 100% crash-free since the last update we released, cause we love you.
-
-
-If you'd like to contact, please ping us on IG @codetard or email at 29satnam@gmail.com.
 
 
 ## Version 4.4
@@ -71,7 +146,6 @@ If you find any issue and think we should know, contact me @codetard on Instagra
 ## Version 4.3
 
 #### What’s New:
-We update the app regularly so we can make it better for you.
 
 * Added Tap-to-focus Indicator.
 
@@ -91,8 +165,6 @@ We update the app regularly so we can make it better for you.
 
 #### What’s New:
 
-We update the app regularly so we can make it better for you.
-
 * Crash fixes
 
 * Grid fix
@@ -104,12 +176,10 @@ We update the app regularly so we can make it better for you.
 
 * Crash fixes.
 
-
 ## Version 3.0
 
 #### What’s New:
 
-We update the app regularly so we can make it better for you.
 
 * Improved WB algorithm.
 
@@ -124,8 +194,6 @@ We update the app regularly so we can make it better for you.
 ## Version 2.0
 
 #### What’s New:
-
-We update the app regularly so we can make it better for you.
 
 * Added manual tap-to-focus.
 
