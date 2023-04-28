@@ -18,192 +18,259 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
 
-## Version 6.0
+#### 6.3.5
+Apr 3, 2023
 
-#### What’s New:
+Hey KEVers,
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Improved White Balance(WB) identification algorithm.
+
+#### 6.3.4
+Mar 6, 2023
+
+Hey KEVers,
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Stability and White Balance algorithm improvements.
+* KEV is now available in Japanese.
+
+#### 6.3.3
+Jan 31, 2023
+
+Hey KEVers,
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Stability and White Balance algorithm improvements.
+* Fixed an issue where feedback cell wasn't hiding after feedback submission.
+
+#### 6.3.2
+Dec 14, 2022
+
+Hey KEVers,
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Stability and performance improvements.
+
+#### 6.3.1
+Dec 11, 2022
+
+Hey KEVers,
+
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Fixed an app crash caused by camera flip using Apple Watch.
+
+#### 6.3
+Dec 3, 2022
+
+Hey KEVers,
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Added 'Always on Display' option, so you can take temperature readings uninterruptedly.
+* Fixed a crash that we hope you never encountered.
+
+#### 6.2
+Sep 20, 2022
+
+Hey KEVers,
+
+
+Thanks for using 'White Balance Meter - KEV'.
+
+Here's what's new:
+
+* Added Simplified Chinese language.
+* Fixed a Watch app crash that we hope you never encountered.
+
+#### 6.1
+Jul 23, 2022
+
+Hey KEVers,
+
+Thanks for using 'KEV: White Balance Meter'.
+
+Here's what's new:
+
+* Fixed a bug that we hope you never encountered.
+
+#### 6.0
+Jul 13, 2022
+
+Hey KEVers,
+
+
+Thanks for using 'KEV: White Balance Meter'.
+
+Here's what's new:
 
 * Redesigned User Interface.
-
 * Redesigned App Icon.
-
 * Fixed an issue where compensation wasn't working.
-
 * Added ability to zoom.
-
 * Introducing KEV WatchOS App, it's a companion app that shares real-time data from iOS app to Watch app.
-
 * Fixed a bug that we hope you never encountered.
-
 * Added yellow brackets on the camera grid that indicated when the app is ready to take reading.
-
 * Added a section for 'Request a feature'.
 
+#### 5.6
+Feb 16, 2022
 
-## Version 5.6
+Hey KEVers,
 
-#### What’s New:
+Thanks for using 'KEV: White Balance Meter'.
+
+Here's what's new:
 
 * KEV's got a better app icon.
-
 * Fixed a bug that we hope you never encountered.
 
+#### 5.5
+Feb 11, 2022
 
-## Version 5.5
+Hey KEVers,
 
-#### What’s New:
+Thanks for using 'KEV White Balance Meter'.
+
+Here's what's new:
 
 * Added how-to-use videos by Phillip Riley, a YouTuber & Ryan, a Real Estate Photographer, for better understanding of the app.
-
 * Fixed a bug that we hope you never encountered.
 
+#### 5.4
+Dec 12, 2021
 
-## Version 5.4
+Hey KEVers,
 
-#### What’s New:
+Thanks for using 'KEV White Balance Meter'.
+
+Here's what's new:
 
 * Stunning landscape mode for iPhone and iPad.
-
 * Shadowed text and labels, better text visibility in bright and light environments.
 
+#### 5.3
+Aug 30, 2021
 
-## Version 5.3
+Hey KEVers,
 
-#### What’s New:
+Thanks for using KEV White Balance Meter!
 
+Here's what's new:
 
 * Introducing Correlated Colour Temperature(CCT).
-
 * New app icon, now better and cooler.
-
 * Redesigned user interface, meter has now bigger and bolder font.
 
+#### 5.2
+Aug 26, 2021
 
-## Version 5.2
-
-#### What’s New:
+Hey, there! We've been working hard on making 'KEV: White Balance' even better for you.
 
 * Added color temperature description. Now app tells you if the temperature is warm or cold with description for lighting condition.
-
 * Now we are also discoverable in the Thai language.
 
+#### 5.1
+Aug 20, 2021
 
-## Version 5.1
-
-#### What’s New:
+Hey there! We've been working hard on making KEV even better for you.
 
 * Redesigned app icon, KEV is now colorful.
-
 * KEV is now also discoverable in the Polish language.
-
 * We fixed a bug that you probably never encountered.
 
+#### 5.0
+Aug 12, 2021
 
-## Version 5.0
-
-#### What’s New:
+Hey there! We've been working hard on making KEV even better for you.
 
 * Now capture pixel perfect, high resolution snapshots.
-
 * KEV is now also discoverable in Japanese.
 
+#### 4.6
+Aug 8, 2021
 
-## Version 4.6
+Hey there! We've been working hard on making KEV even better for you. In addition to our usual bug fixes and improvements, we've tinkered under the hood to speed up our white balance algorithm.
 
-#### What’s New:
-
-* We've been working hard on making KEV even better for you. In addition to our usual bug fixes and improvements, we've tinkered under the hood to speed up our white balance algorithm.
-
-
-## Version 4.5
-
-#### What’s New:
+#### 4.5
+Aug 4, 2021
 
 We are working hard to meet your expectations. Also, we brought a ton of new features with this update.
 
+Here's what's new in this version:
+
 * KEV is now also available in French, Spanish, Chinese, and Portuguese.
-
 * Added ability to calibrate and compensate the white balance.
-
 * Now capture, save and share scene snapshots with color temperature and geolocation readings.
-
 * KEV is now 100% crash-free since the last update we released, cause we love you.
 
+#### 4.4
+Jun 29, 2021
 
-## Version 4.4
-
-#### What’s New:
 We are working hard to meet your expectations and we update the app regularly so we can make it better for you.
 
-If you find any issue and think we should know, contact me @codetard on Instagram.
-
-#### Fixed:
-
 * Crash fix: Fixed an exception where tint combinations yield out-of-range device RGB values, causing a crash in the app.
-
 * Improved crash reporting.
 
-
-## Version 4.3
-
-#### What’s New:
-
-* Added Tap-to-focus Indicator.
-
-* User interface enhancements.
-
-* Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
-
-
-## Version 4.2
-
-#### What’s New:
+#### 4.3
+Jun 24, 2021
 
 We update the app regularly so we can make it better for you.
 
+* Added Tap-to-focus Indicator.
+* User interface enhancements.
+* Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
 
-## Version 4.1
+#### 4.2
+Jun 23, 2021
 
-#### What’s New:
+We update the app regularly so we can make it better for you.
+
+#### 4.1
+Jun 20, 2021
+
+We update the app regularly so we can make it better for you.
 
 * Crash fixes
-
 * Grid fix
-
 * Better calibration
 
+#### 3
+Jun 18, 2021
 
-#### Fixed:
-
-* Crash fixes.
-
-## Version 3.0
-
-#### What’s New:
-
+We update the app regularly so we can make it better for you.
 
 * Improved WB algorithm.
-
 * Better user experience.
-
-
-#### Fixed:
-
 * Crash fixes.
 
+#### 2.0
+May 24, 2021
 
-## Version 2.0
-
-#### What’s New:
+We update the app regularly so we can make it better for you.
 
 * Added manual tap-to-focus.
-
 * Improved White Balance algorithm.
-
-#### Fixed:
-
 * We have updated the app to fix some crashes and make features load faster.
 
-
-## Version 1.0
-
-Initial release
+#### 1.0
+* Initial release.
+Jan 30, 2020
