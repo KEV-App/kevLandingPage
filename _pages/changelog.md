@@ -21,22 +21,10 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 ## 6.3.5
 #### Apr 3, 2023
 
-Hey KEVers,
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
-
 * Improved White Balance(WB) identification algorithm.
 
 ## 6.3.4
 #### Mar 6, 2023
-
-Hey KEVers,
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
 
 * Stability and White Balance algorithm improvements.
 * KEV is now available in Japanese.
@@ -44,46 +32,21 @@ Here's what's new:
 ## 6.3.3
 #### Jan 31, 2023
 
-Hey KEVers,
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
-
 * Stability and White Balance algorithm improvements.
 * Fixed an issue where feedback cell wasn't hiding after feedback submission.
 
 ## 6.3.2
 #### Dec 14, 2022
 
-Hey KEVers,
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
-
 * Stability and performance improvements.
 
 ## 6.3.1
 #### Dec 11, 2022
 
-Hey KEVers,
-
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
-
 * Fixed an app crash caused by camera flip using Apple Watch.
 
 ## 6.3
 #### Dec 3, 2022
-
-Hey KEVers,
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
 
 * Added 'Always on Display' option, so you can take temperature readings uninterruptedly.
 * Fixed a crash that we hope you never encountered.
@@ -91,36 +54,16 @@ Here's what's new:
 ## 6.2
 #### Sep 20, 2022
 
-Hey KEVers,
-
-
-Thanks for using 'White Balance Meter - KEV'.
-
-Here's what's new:
-
 * Added Simplified Chinese language.
 * Fixed a Watch app crash that we hope you never encountered.
 
 ## 6.1
 #### Jul 23, 2022
 
-Hey KEVers,
-
-Thanks for using 'KEV: White Balance Meter'.
-
-Here's what's new:
-
 * Fixed a bug that we hope you never encountered.
 
 ## 6.0
 #### Jul 13, 2022
-
-Hey KEVers,
-
-
-Thanks for using 'KEV: White Balance Meter'.
-
-Here's what's new:
 
 * Redesigned User Interface.
 * Redesigned App Icon.
@@ -134,23 +77,11 @@ Here's what's new:
 ## 5.6
 #### Feb 16, 2022
 
-Hey KEVers,
-
-Thanks for using 'KEV: White Balance Meter'.
-
-Here's what's new:
-
 * KEV's got a better app icon.
 * Fixed a bug that we hope you never encountered.
 
 ## 5.5
 #### Feb 11, 2022
-
-Hey KEVers,
-
-Thanks for using 'KEV White Balance Meter'.
-
-Here's what's new:
 
 * Added how-to-use videos by Phillip Riley, a YouTuber & Ryan, a Real Estate Photographer, for better understanding of the app.
 * Fixed a bug that we hope you never encountered.
@@ -158,23 +89,11 @@ Here's what's new:
 ## 5.4
 #### Dec 12, 2021
 
-Hey KEVers,
-
-Thanks for using 'KEV White Balance Meter'.
-
-Here's what's new:
-
 * Stunning landscape mode for iPhone and iPad.
 * Shadowed text and labels, better text visibility in bright and light environments.
 
 ## 5.3
 #### Aug 30, 2021
-
-Hey KEVers,
-
-Thanks for using KEV White Balance Meter!
-
-Here's what's new:
 
 * Introducing Correlated Colour Temperature(CCT).
 * New app icon, now better and cooler.
@@ -183,15 +102,11 @@ Here's what's new:
 ## 5.2
 #### Aug 26, 2021
 
-Hey, there! We've been working hard on making 'KEV: White Balance' even better for you.
-
 * Added color temperature description. Now app tells you if the temperature is warm or cold with description for lighting condition.
 * Now we are also discoverable in the Thai language.
 
 ## 5.1
 #### Aug 20, 2021
-
-Hey there! We've been working hard on making KEV even better for you.
 
 * Redesigned app icon, KEV is now colorful.
 * KEV is now also discoverable in the Polish language.
@@ -199,8 +114,6 @@ Hey there! We've been working hard on making KEV even better for you.
 
 ## 5.0
 #### Aug 12, 2021
-
-Hey there! We've been working hard on making KEV even better for you.
 
 * Now capture pixel perfect, high resolution snapshots.
 * KEV is now also discoverable in Japanese.
@@ -213,8 +126,6 @@ Hey there! We've been working hard on making KEV even better for you. In additio
 ## 4.5
 #### Aug 4, 2021
 
-We are working hard to meet your expectations. Also, we brought a ton of new features with this update.
-
 Here's what's new in this version:
 
 * KEV is now also available in French, Spanish, Chinese, and Portuguese.
@@ -225,15 +136,11 @@ Here's what's new in this version:
 ## 4.4
 #### Jun 29, 2021
 
-We are working hard to meet your expectations and we update the app regularly so we can make it better for you.
-
 * Crash fix: Fixed an exception where tint combinations yield out-of-range device RGB values, causing a crash in the app.
 * Improved crash reporting.
 
 ## 4.3
 #### Jun 24, 2021
-
-We update the app regularly so we can make it better for you.
 
 * Added Tap-to-focus Indicator.
 * User interface enhancements.
@@ -247,8 +154,6 @@ We update the app regularly so we can make it better for you.
 ## 4.1
 #### Jun 20, 2021
 
-We update the app regularly so we can make it better for you.
-
 * Crash fixes
 * Grid fix
 * Better calibration
@@ -256,16 +161,12 @@ We update the app regularly so we can make it better for you.
 ## 3
 #### Jun 18, 2021
 
-We update the app regularly so we can make it better for you.
-
 * Improved WB algorithm.
 * Better user experience.
 * Crash fixes.
 
 ## 2.0
 #### May 24, 2021
-
-We update the app regularly so we can make it better for you.
 
 * Added manual tap-to-focus.
 * Improved White Balance algorithm.
