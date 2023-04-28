@@ -19,7 +19,7 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 <br> -->
 
 ## 6.3.5
-Apr 3, 2023
+#### Apr 3, 2023
 
 Hey KEVers,
 
@@ -30,7 +30,7 @@ Here's what's new:
 * Improved White Balance(WB) identification algorithm.
 
 ## 6.3.4
-Mar 6, 2023
+#### Mar 6, 2023
 
 Hey KEVers,
 
@@ -42,7 +42,7 @@ Here's what's new:
 * KEV is now available in Japanese.
 
 ## 6.3.3
-Jan 31, 2023
+#### Jan 31, 2023
 
 Hey KEVers,
 
@@ -54,7 +54,7 @@ Here's what's new:
 * Fixed an issue where feedback cell wasn't hiding after feedback submission.
 
 ## 6.3.2
-Dec 14, 2022
+#### Dec 14, 2022
 
 Hey KEVers,
 
@@ -65,7 +65,7 @@ Here's what's new:
 * Stability and performance improvements.
 
 ## 6.3.1
-Dec 11, 2022
+#### Dec 11, 2022
 
 Hey KEVers,
 
@@ -77,7 +77,7 @@ Here's what's new:
 * Fixed an app crash caused by camera flip using Apple Watch.
 
 ## 6.3
-Dec 3, 2022
+#### Dec 3, 2022
 
 Hey KEVers,
 
@@ -89,7 +89,7 @@ Here's what's new:
 * Fixed a crash that we hope you never encountered.
 
 ## 6.2
-Sep 20, 2022
+#### Sep 20, 2022
 
 Hey KEVers,
 
@@ -102,7 +102,7 @@ Here's what's new:
 * Fixed a Watch app crash that we hope you never encountered.
 
 ## 6.1
-Jul 23, 2022
+#### Jul 23, 2022
 
 Hey KEVers,
 
@@ -113,7 +113,7 @@ Here's what's new:
 * Fixed a bug that we hope you never encountered.
 
 ## 6.0
-Jul 13, 2022
+#### Jul 13, 2022
 
 Hey KEVers,
 
@@ -132,7 +132,7 @@ Here's what's new:
 * Added a section for 'Request a feature'.
 
 ## 5.6
-Feb 16, 2022
+#### Feb 16, 2022
 
 Hey KEVers,
 
@@ -144,7 +144,7 @@ Here's what's new:
 * Fixed a bug that we hope you never encountered.
 
 ## 5.5
-Feb 11, 2022
+#### Feb 11, 2022
 
 Hey KEVers,
 
@@ -156,7 +156,7 @@ Here's what's new:
 * Fixed a bug that we hope you never encountered.
 
 ## 5.4
-Dec 12, 2021
+#### Dec 12, 2021
 
 Hey KEVers,
 
@@ -168,7 +168,7 @@ Here's what's new:
 * Shadowed text and labels, better text visibility in bright and light environments.
 
 ## 5.3
-Aug 30, 2021
+#### Aug 30, 2021
 
 Hey KEVers,
 
@@ -181,7 +181,7 @@ Here's what's new:
 * Redesigned user interface, meter has now bigger and bolder font.
 
 ## 5.2
-Aug 26, 2021
+#### Aug 26, 2021
 
 Hey, there! We've been working hard on making 'KEV: White Balance' even better for you.
 
@@ -189,7 +189,7 @@ Hey, there! We've been working hard on making 'KEV: White Balance' even better f
 * Now we are also discoverable in the Thai language.
 
 ## 5.1
-Aug 20, 2021
+#### Aug 20, 2021
 
 Hey there! We've been working hard on making KEV even better for you.
 
@@ -198,7 +198,7 @@ Hey there! We've been working hard on making KEV even better for you.
 * We fixed a bug that you probably never encountered.
 
 ## 5.0
-Aug 12, 2021
+#### Aug 12, 2021
 
 Hey there! We've been working hard on making KEV even better for you.
 
@@ -206,12 +206,12 @@ Hey there! We've been working hard on making KEV even better for you.
 * KEV is now also discoverable in Japanese.
 
 ## 4.6
-Aug 8, 2021
+#### Aug 8, 2021
 
 Hey there! We've been working hard on making KEV even better for you. In addition to our usual bug fixes and improvements, we've tinkered under the hood to speed up our white balance algorithm.
 
 ## 4.5
-Aug 4, 2021
+#### Aug 4, 2021
 
 We are working hard to meet your expectations. Also, we brought a ton of new features with this update.
 
@@ -223,7 +223,7 @@ Here's what's new in this version:
 * KEV is now 100% crash-free since the last update we released, cause we love you.
 
 ## 4.4
-Jun 29, 2021
+#### Jun 29, 2021
 
 We are working hard to meet your expectations and we update the app regularly so we can make it better for you.
 
@@ -231,7 +231,7 @@ We are working hard to meet your expectations and we update the app regularly so
 * Improved crash reporting.
 
 ## 4.3
-Jun 24, 2021
+#### Jun 24, 2021
 
 We update the app regularly so we can make it better for you.
 
@@ -240,12 +240,12 @@ We update the app regularly so we can make it better for you.
 * Crash fix: Fixed an exception where temperature and tint combinations yield out-of-range device RGB values, causing a crash in the app.
 
 ## 4.2
-Jun 23, 2021
+#### Jun 23, 2021
 
 We update the app regularly so we can make it better for you.
 
 ## 4.1
-Jun 20, 2021
+#### Jun 20, 2021
 
 We update the app regularly so we can make it better for you.
 
@@ -254,7 +254,7 @@ We update the app regularly so we can make it better for you.
 * Better calibration
 
 ## 3
-Jun 18, 2021
+#### Jun 18, 2021
 
 We update the app regularly so we can make it better for you.
 
