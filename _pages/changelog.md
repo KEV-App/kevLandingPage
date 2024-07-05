@@ -18,6 +18,27 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
 
+
+## 6.4.3
+#### Apr 18, 2024
+
+* Added support for additional languages for broader accessibility.
+
+## 6.4.2
+#### Feb 9, 2024
+
+* Fixed a bug we hope you never encountered.
+
+## 6.4.1
+#### Nov 5, 2023
+
+* Fixed a problem where views couldn't revert to their previous state when the orientation changed.
+
+## 6.4
+#### May 18, 2023
+
+* Addressed a bug that caused the app to crash when attempting to log a reading.
+
 ## 6.3.5
 #### Apr 3, 2023
 
