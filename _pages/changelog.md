@@ -18,6 +18,10 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
 
+## 6.4.4
+#### Jul 10, 2024
+
+* Considering additional white balance factors for even more accurate data.
 
 ## 6.4.3
 #### Apr 18, 2024
