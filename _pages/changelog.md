@@ -5,7 +5,6 @@ include_in_header: true
 ---
 
 #### Any feedback, suggestions or advice can be sent directly to 29satnam@gmail.com.
-<br> -->
 # Changelog
 
 <!-- ## **Version 2.0**
