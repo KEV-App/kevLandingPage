@@ -4,6 +4,8 @@ title: What's New
 include_in_header: true
 ---
 
+#### As always, any feedback, suggestions or advice can be sent directly to 29satnam@gmail.com.
+
 # Changelog
 
 <!-- ## **Version 2.0**
@@ -17,6 +19,14 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 - Much far proper exotically precise unaccountable.
 - [Changes to Privacy Policy](/privacypolicy)
 <br> -->
+
+## 6.4.5
+#### Sep 28, 2024
+
+* By popular demand, the tint value feature has been added.
+* New icons have been added for iOS 18, supporting Dark, Light, and Tinted modes.
+
+As always, feel free to share any feedback, suggestions, or advice at 29satnam@gmail.com.
 
 ## 6.4.4
 #### Jul 10, 2024
