@@ -4,7 +4,7 @@ title: What's New
 include_in_header: true
 ---
 
-#### As always, any feedback, suggestions or advice can be sent directly to 29satnam@gmail.com.
+#### Any feedback, suggestions or advice can be sent directly to 29satnam@gmail.com.
 
 # Changelog
 
