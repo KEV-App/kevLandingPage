@@ -26,8 +26,6 @@ This is the first update to our app. Jeez **goodness** by kept more sensually a 
 * By popular demand, the tint value feature has been added.
 * New icons have been added for iOS 18, supporting Dark, Light, and Tinted modes.
 
-As always, feel free to share any feedback, suggestions, or advice at 29satnam@gmail.com.
-
 ## 6.4.4
 #### Jul 10, 2024
 
