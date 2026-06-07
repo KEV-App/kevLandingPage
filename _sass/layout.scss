@@ -145,27 +145,25 @@
 .hero-meta b { color: var(--text); }
 .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
 
-// phone mockup
+// app preview (no device frame)
 .phone {
 	justify-self: center;
 	position: relative;
-	width: 320px;
-	max-width: 82vw;
+	width: 300px;
+	max-width: 78vw;
 	aspect-ratio: 320 / 650;
-	background: #0b0d12;
-	border-radius: 52px;
-	padding: 12px;
+	border-radius: 36px;
 	box-shadow: var(--shadow-lg);
-	border: 2px solid #1c2027;
+	cursor: default;
+	overflow: hidden;
 }
 .phone video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 42px;
+	border-radius: 36px;
 	background: #000;
 }
-.phone { cursor: default; }
 .phone-glow {
 	position: absolute;
 	inset: -30px;
@@ -209,10 +207,11 @@
 	background: rgba(8, 9, 12, 0.94);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	animation: vfsIn .2s ease;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s ease, visibility .3s ease;
 }
-.vfs[hidden] { display: none; }
-@keyframes vfsIn { from { opacity: 0; } to { opacity: 1; } }
+.vfs.is-open { opacity: 1; visibility: visible; }
 .vfs-video {
 	height: min(92vh, 100%);
 	width: auto;

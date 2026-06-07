@@ -233,7 +233,7 @@
 	{% include site-footer.html %}
 
 	<!-- Immersive full-screen video overlay -->
-	<div class="vfs" id="vfs" hidden>
+	<div class="vfs" id="vfs" aria-hidden="true">
 		<button type="button" class="vfs-close" aria-label="Close">✕</button>
 		<video class="vfs-video" playsinline controls preload="none"></video>
 	</div>
@@ -275,7 +275,8 @@
 			}
 			function show(mode) {
 				attach();
-				fs.hidden = false;
+				fs.classList.add('is-open');
+				fs.setAttribute('aria-hidden', 'false');
 				if (mode === 'manual') {
 					fs.classList.remove('is-auto');
 					document.body.style.overflow = 'hidden';
@@ -290,7 +291,8 @@
 				var p = fsv.play(); if (p && p.catch) p.catch(function () {});
 			}
 			function hide() {
-				fs.hidden = true; fs.classList.remove('is-auto');
+				fs.classList.remove('is-open', 'is-auto');
+				fs.setAttribute('aria-hidden', 'true');
 				document.body.style.overflow = '';
 				if (fsv) fsv.pause();
 				if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(function () {}); }
@@ -304,13 +306,13 @@
 			if (phone) phone.addEventListener('click', manual);
 			if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closeAll(); });
 			if (fs) fs.addEventListener('click', function (e) { if (e.target === fs) closeAll(); });
-			document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && fs && !fs.hidden) closeAll(); });
+			document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && fs && fs.classList.contains('is-open')) closeAll(); });
 
 			// Scroll-driven auto full-screen (mobile only).
 			// Opens when the video is centred in view; a small extra scroll
 			// (DISMISS px) dismisses it, so hiding is quick regardless of the
 			// video's height.
-			var DISMISS = 150, openY = 0, ticking = false;
+			var openY = 0, ticking = false;
 			function onScroll() {
 				scrolled = true;
 				if (!mq.matches || manualOpen || !phone) return;
@@ -319,9 +321,10 @@
 				var vh = window.innerHeight;
 				var vis = Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0));
 				var ratio = r.height ? vis / r.height : 0;
-				if (!autoOpen && !userClosed && ratio >= 0.5) { autoOpen = true; openY = y; show('auto'); }
-				else if (autoOpen && Math.abs(y - openY) > DISMISS) { autoOpen = false; userClosed = true; hide(); }
-				if (ratio <= 0.12) userClosed = false; // re-arm once video is out of view
+				var stick = Math.round(vh * 0.7); // sticky travel before release
+				if (!autoOpen && !userClosed && ratio >= 0.55) { autoOpen = true; openY = y; show('auto'); }
+				else if (autoOpen && Math.abs(y - openY) > stick) { autoOpen = false; userClosed = true; hide(); }
+				if (ratio <= 0.2) userClosed = false; // re-arm once video leaves view
 			}
 			window.addEventListener('scroll', function () {
 				if (ticking) return; ticking = true;
