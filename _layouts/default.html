@@ -11,7 +11,7 @@
 		<div class="wrap hero-grid">
 			<div class="hero-copy">
 				<span class="eyebrow">★ 4.5 / 5 · <b>The #1 White Balance app</b></span>
-				<h1>Pro <span class="grad">white balance</span> &amp; color temperature meter in your pocket.</h1>
+				<h1>Pro <span class="grad">White Balance Meter</span> in your pocket.</h1>
 				<p class="lede">
 					KEV turns your iPhone or iPad into an accurate light meter. Point the
 					camera and read the <b>color temperature in Kelvin</b> in real time —
@@ -32,7 +32,7 @@
 			</div>
 
 			<div class="phone-stage">
-				<div class="phone">
+				<div class="phone" id="phoneCard" role="button" tabindex="0" aria-label="Watch full-screen preview">
 					<div class="phone-glow"></div>
 					<video
 						class="hero-video"
@@ -41,6 +41,7 @@
 						autoplay muted loop playsinline preload="metadata"
 						aria-label="{{ site.app_name }} App Preview">
 					</video>
+					<button type="button" class="phone-expand">▶ Watch full-screen</button>
 				</div>
 			</div>
 		</div>
@@ -118,36 +119,52 @@
 				<h2>Everything a light meter should be — minus the $500 hardware.</h2>
 				<p>KEV uses AI to analyze the live preview and hand you accurate white balance data instantly.</p>
 			</div>
-			<div class="features">
-				<div class="card reveal">
+			<div class="bento">
+				<div class="bt bt--lg reveal">
+					<span class="bt-index">01 / 06</span>
 					<div class="ico">🌡️</div>
 					<h3>Real-time Kelvin</h3>
-					<p>Live color temperature in Kelvin the moment you point your camera at a scene or light source.</p>
+					<p>Point your camera and read the exact color temperature in Kelvin — live, the instant light changes.</p>
+					<div class="meter">
+						<div class="meter-read">
+							<span class="k">5374</span><span class="unit">K</span>
+							<span class="tint">Tint +3</span>
+						</div>
+						<div class="meter-bar"><span class="marker"></span></div>
+						<div class="meter-scale"><span>2800K</span><span>5500K</span><span>6500K+</span></div>
+					</div>
 				</div>
-				<div class="card reveal">
+				<div class="bt reveal">
+					<span class="bt-index">02</span>
 					<div class="ico">🧠</div>
 					<h3>AI scene analysis</h3>
-					<p>On-device AI reads the live preview and factors in lighting for dependable, accurate readings.</p>
+					<p>On-device AI reads the preview and factors in the lighting for dependable readings.</p>
 				</div>
-				<div class="card reveal">
+				<div class="bt reveal">
+					<span class="bt-index">03</span>
 					<div class="ico">🎚️</div>
 					<h3>Compensate &amp; calculate</h3>
-					<p>Fine-tune white balance and tint, then calculate the exact correction you need on set.</p>
+					<p>Fine-tune white balance and tint, then calculate the exact correction on set.</p>
 				</div>
-				<div class="card reveal">
+				<div class="bt reveal">
+					<span class="bt-index">04</span>
 					<div class="ico">📸</div>
 					<h3>Snapshot with data</h3>
-					<p>Capture a shot stamped with its color temperature reading and location for your notes.</p>
+					<p>Capture a frame stamped with its color temperature and location for your notes.</p>
 				</div>
-				<div class="card reveal">
+				<div class="bt reveal">
+					<span class="bt-index">05</span>
 					<div class="ico">🔍</div>
 					<h3>Manual focus &amp; 5× zoom</h3>
-					<p>Pinch to zoom up to 5× and focus manually to meter a precise, close-range area.</p>
+					<p>Pinch to 5× and focus manually to meter a precise, close-range spot.</p>
 				</div>
-				<div class="card reveal">
+				<div class="bt bt--wide reveal">
+					<span class="bt-index">06</span>
 					<div class="ico">⌚</div>
-					<h3>Apple Watch companion</h3>
-					<p>Hot-shoe mount your iPhone and read color temperature straight from the KEV Watch app.</p>
+					<div class="bt-body">
+						<h3>Apple Watch companion</h3>
+						<p>Hot-shoe mount your iPhone over the camera and read color temperature straight from your wrist on the KEV Watch app — hands free while you shoot.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -215,6 +232,12 @@
 
 	{% include site-footer.html %}
 
+	<!-- Immersive full-screen video overlay -->
+	<div class="vfs" id="vfs" hidden>
+		<button type="button" class="vfs-close" aria-label="Close">✕</button>
+		<video class="vfs-video" playsinline controls preload="none"></video>
+	</div>
+
 	<!-- App Preview video (HLS) -->
 	<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 	<script>
@@ -232,6 +255,43 @@
 			} else {
 				v.src = src; play();
 			}
+
+			// ----- Immersive full-screen player -----
+			var fs = document.getElementById('vfs');
+			var fsv = fs && fs.querySelector('.vfs-video');
+			var phone = document.getElementById('phoneCard');
+			var closeBtn = fs && fs.querySelector('.vfs-close');
+			var loaded = false;
+			function attach() {
+				if (loaded || !fsv) return; loaded = true;
+				if (fsv.canPlayType('application/vnd.apple.mpegurl')) { fsv.src = src; }
+				else if (window.Hls && Hls.isSupported()) { var h = new Hls(); h.loadSource(src); h.attachMedia(fsv); }
+				else { fsv.src = src; }
+			}
+			function openFs() {
+				attach();
+				fs.hidden = false;
+				document.body.style.overflow = 'hidden';
+				fsv.muted = false;
+				try { fsv.currentTime = v.currentTime || 0; } catch (e) {}
+				var p = fsv.play(); if (p && p.catch) p.catch(function () {});
+				if (fs.requestFullscreen) { fs.requestFullscreen().catch(function () {}); }
+				else if (fs.webkitRequestFullscreen) { fs.webkitRequestFullscreen(); }
+			}
+			function closeFs() {
+				fs.hidden = true;
+				document.body.style.overflow = '';
+				if (fsv) { fsv.pause(); }
+				if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(function () {}); }
+				else if (document.webkitFullscreenElement && document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+			}
+			if (phone) {
+				phone.addEventListener('click', openFs);
+				phone.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openFs(); } });
+			}
+			if (closeBtn) { closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closeFs(); }); }
+			if (fs) { fs.addEventListener('click', function (e) { if (e.target === fs) closeFs(); }); }
+			document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && fs && !fs.hidden) closeFs(); });
 		})();
 
 		// Scroll reveal
