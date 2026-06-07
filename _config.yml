@@ -69,6 +69,13 @@ collections:
     output: true
     permalink: /:path/
 
+# Keep the Google verification file out of the sitemap
+defaults:
+  - scope:
+      path: "google39fb930a6dfdef51.html"
+    values:
+      sitemap: false
+
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
