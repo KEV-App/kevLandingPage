@@ -32,7 +32,7 @@
 			</div>
 
 			<div class="phone-stage">
-				<div class="phone" id="phoneCard" role="button" tabindex="0" aria-label="Watch full-screen preview">
+				<div class="phone" id="phoneCard">
 					<div class="phone-glow"></div>
 					<video
 						class="hero-video"
@@ -41,8 +41,8 @@
 						autoplay muted loop playsinline preload="metadata"
 						aria-label="{{ site.app_name }} App Preview">
 					</video>
-					<button type="button" class="phone-expand">▶ Watch full-screen</button>
 				</div>
+				<button type="button" class="phone-expand">▶ Watch full-screen</button>
 			</div>
 		</div>
 	</header>
@@ -298,7 +298,7 @@
 				if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(function () {}); }
 				else if (document.webkitFullscreenElement && document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
 			}
-			function manual() { if (!mq.matches) return; manualOpen = true; userClosed = false; show('manual'); }
+			function manual() { manualOpen = true; userClosed = false; show('manual'); }
 			function closeAll() { manualOpen = false; autoOpen = false; userClosed = true; hide(); }
 
 			var expandBtn = document.querySelector('.phone-expand');
@@ -314,8 +314,8 @@
 			// video's height.
 			var openY = 0, ticking = false;
 			function onScroll() {
-				scrolled = true;
-				if (!mq.matches || manualOpen || !phone) return;
+				return; // auto full-screen on scroll disabled
+				// eslint-disable-next-line
 				var y = window.pageYOffset || document.documentElement.scrollTop;
 				var r = phone.getBoundingClientRect();
 				var vh = window.innerHeight;

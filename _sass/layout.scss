@@ -145,23 +145,20 @@
 .hero-meta b { color: var(--text); }
 .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
 
-// app preview (no device frame)
+// app preview (no device frame) - video shown at its own aspect, never cropped
 .phone {
 	justify-self: center;
 	position: relative;
 	width: 300px;
 	max-width: 78vw;
-	aspect-ratio: 320 / 650;
-	border-radius: 36px;
-	box-shadow: var(--shadow-lg);
 	cursor: default;
-	overflow: hidden;
 }
 .phone video {
+	display: block;
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	height: auto;
 	border-radius: 36px;
+	box-shadow: var(--shadow-lg);
 	background: #000;
 }
 .phone-glow {
@@ -173,27 +170,27 @@
 	z-index: -1;
 	filter: blur(20px);
 }
+.phone-stage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+}
 .phone-expand {
-	position: absolute;
-	bottom: 22px; left: 50%;
-	transform: translateX(-50%);
-	z-index: 4;
-	display: none; // mobile only (shown via media query below)
+	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	border: 0;
+	border: 1px solid var(--border);
 	cursor: pointer;
-	font: 700 14px/1 var(--font);
-	color: #0b0d12;
-	padding: 11px 18px;
+	font: 700 15px/1 var(--font);
+	color: var(--text);
+	padding: 13px 22px;
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.88);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	box-shadow: 0 6px 18px rgba(11, 13, 18, 0.28);
-	transition: transform .18s ease, background .18s ease;
+	background: var(--bg);
+	box-shadow: var(--shadow);
+	transition: transform .18s ease, box-shadow .18s ease;
 }
-.phone-expand:hover { transform: translateX(-50%) translateY(-2px); background: #fff; }
+.phone-expand:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
 // Fullscreen / immersive video overlay
 .vfs {
@@ -213,9 +210,11 @@
 }
 .vfs.is-open { opacity: 1; visibility: visible; }
 .vfs-video {
-	height: min(92vh, 100%);
-	width: auto;
+	max-height: 92vh;
 	max-width: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
 	border-radius: 20px;
 	background: #000;
 	box-shadow: var(--shadow-lg);
@@ -236,19 +235,11 @@
 }
 .vfs-close:hover { background: rgba(255, 255, 255, 0.28); }
 @media (max-width: 600px) {
-	.vfs { padding: 0; }
-	.vfs-video { height: 100%; width: 100%; border-radius: 0; object-fit: contain; }
+	.vfs { padding: 14px; }
+	.vfs-video { max-height: 88vh; border-radius: 14px; }
 	.vfs-close { top: 14px; right: 14px; }
 }
-// Show the expand affordance only on touch / small screens
-@media (max-width: 900px), (pointer: coarse) {
-	.phone { cursor: pointer; }
-	.phone-expand { display: inline-flex; }
-}
-// Scroll-driven auto immersive mode (mobile): let touch scroll pass through
-.vfs.is-auto { pointer-events: none; background: #000; }
-.vfs.is-auto .vfs-video { width: 100%; height: 100%; border-radius: 0; object-fit: cover; }
-.vfs.is-auto .vfs-close { pointer-events: auto; }
+.phone { cursor: pointer; }
 
 @media (max-width: 900px) {
 	.hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
