@@ -256,42 +256,77 @@
 				v.src = src; play();
 			}
 
-			// ----- Immersive full-screen player -----
+			// ----- Immersive video player -----
+			// Desktop: no full-screen affordance (inline video only).
+			// Mobile: tap to open, and auto-expand to full-screen while the
+			// video is in view as the user scrolls, auto-dismiss on scroll past.
 			var fs = document.getElementById('vfs');
 			var fsv = fs && fs.querySelector('.vfs-video');
 			var phone = document.getElementById('phoneCard');
 			var closeBtn = fs && fs.querySelector('.vfs-close');
-			var loaded = false;
+			var mq = window.matchMedia('(max-width: 900px), (pointer: coarse)');
+			var loaded = false, manualOpen = false, autoOpen = false, scrolled = false, userClosed = false;
+
 			function attach() {
 				if (loaded || !fsv) return; loaded = true;
 				if (fsv.canPlayType('application/vnd.apple.mpegurl')) { fsv.src = src; }
 				else if (window.Hls && Hls.isSupported()) { var h = new Hls(); h.loadSource(src); h.attachMedia(fsv); }
 				else { fsv.src = src; }
 			}
-			function openFs() {
+			function show(mode) {
 				attach();
 				fs.hidden = false;
-				document.body.style.overflow = 'hidden';
-				fsv.muted = false;
-				try { fsv.currentTime = v.currentTime || 0; } catch (e) {}
+				if (mode === 'manual') {
+					fs.classList.remove('is-auto');
+					document.body.style.overflow = 'hidden';
+					fsv.muted = false; fsv.setAttribute('controls', '');
+					try { fsv.currentTime = v.currentTime || 0; } catch (e) {}
+					if (fs.requestFullscreen) { fs.requestFullscreen().catch(function () {}); }
+					else if (fs.webkitRequestFullscreen) { fs.webkitRequestFullscreen(); }
+				} else {
+					fs.classList.add('is-auto');
+					fsv.muted = true; fsv.loop = true; fsv.removeAttribute('controls');
+				}
 				var p = fsv.play(); if (p && p.catch) p.catch(function () {});
-				if (fs.requestFullscreen) { fs.requestFullscreen().catch(function () {}); }
-				else if (fs.webkitRequestFullscreen) { fs.webkitRequestFullscreen(); }
 			}
-			function closeFs() {
-				fs.hidden = true;
+			function hide() {
+				fs.hidden = true; fs.classList.remove('is-auto');
 				document.body.style.overflow = '';
-				if (fsv) { fsv.pause(); }
+				if (fsv) fsv.pause();
 				if (document.fullscreenElement && document.exitFullscreen) { document.exitFullscreen().catch(function () {}); }
 				else if (document.webkitFullscreenElement && document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
 			}
-			if (phone) {
-				phone.addEventListener('click', openFs);
-				phone.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openFs(); } });
+			function manual() { if (!mq.matches) return; manualOpen = true; userClosed = false; show('manual'); }
+			function closeAll() { manualOpen = false; autoOpen = false; userClosed = true; hide(); }
+
+			var expandBtn = document.querySelector('.phone-expand');
+			if (expandBtn) expandBtn.addEventListener('click', function (e) { e.stopPropagation(); manual(); });
+			if (phone) phone.addEventListener('click', manual);
+			if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closeAll(); });
+			if (fs) fs.addEventListener('click', function (e) { if (e.target === fs) closeAll(); });
+			document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && fs && !fs.hidden) closeAll(); });
+
+			// Scroll-driven auto full-screen (mobile only).
+			// Opens when the video is centred in view; a small extra scroll
+			// (DISMISS px) dismisses it, so hiding is quick regardless of the
+			// video's height.
+			var DISMISS = 150, openY = 0, ticking = false;
+			function onScroll() {
+				scrolled = true;
+				if (!mq.matches || manualOpen || !phone) return;
+				var y = window.pageYOffset || document.documentElement.scrollTop;
+				var r = phone.getBoundingClientRect();
+				var vh = window.innerHeight;
+				var vis = Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0));
+				var ratio = r.height ? vis / r.height : 0;
+				if (!autoOpen && !userClosed && ratio >= 0.5) { autoOpen = true; openY = y; show('auto'); }
+				else if (autoOpen && Math.abs(y - openY) > DISMISS) { autoOpen = false; userClosed = true; hide(); }
+				if (ratio <= 0.12) userClosed = false; // re-arm once video is out of view
 			}
-			if (closeBtn) { closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closeFs(); }); }
-			if (fs) { fs.addEventListener('click', function (e) { if (e.target === fs) closeFs(); }); }
-			document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && fs && !fs.hidden) closeFs(); });
+			window.addEventListener('scroll', function () {
+				if (ticking) return; ticking = true;
+				window.requestAnimationFrame(function () { ticking = false; onScroll(); });
+			}, { passive: true });
 		})();
 
 		// Scroll reveal
