@@ -1,93 +1,77 @@
-# page title
-page_title: # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+# ============================================================
+#  KEV — White Balance Meter AI  ·  Site configuration
+# ============================================================
 
-# App Info
-ios_app_id: 1494197457  # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+# --- Core / SEO ---
+url: "https://kevapp.co"
+title: "KEV — White Balance & Color Temperature Meter for iPhone & iPad"
+description: >-
+  KEV turns your iPhone or iPad into a pro light meter and white balance meter.
+  Get accurate color temperature in Kelvin in real time — calibrated against a
+  Sekonic SpectroMaster. The #1 white balance, tint and exposure meter for
+  photographers, videographers, cinematographers and gaffers.
 
-appstore_link: # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
-playstore_link: # Enter Google Play Store URL.
+keywords: >-
+  white balance, white balance meter, color temperature, colour temperature,
+  Kelvin meter, kelvin, tint meter, light meter, lumen meter, lux meter,
+  exposure meter, spectrometer, pocket light meter, white balance card, kev wb,
+  photography, videography, gaffer, cinematography, color meter, color temperature meter,
+  色温, 白平衡, 光度计, 开尔文计, 色溫, 開爾文計, 測光表, 植物燈計,
+  色温度, ホワイトバランス, 露光メーター, スペクトロメーター,
+  баланс белого, цветовая температура, fotómetro, temperatura de color
+
+# Locales we target in stores (used for hreflang + OG alternates)
+hreflangs: ["en", "zh-Hans", "zh-Hant", "ja", "ru", "es"]
+og_locales: ["zh_CN", "zh_TW", "ja_JP", "ru_RU", "es_ES"]
+
+# --- App info (static for fast load + indexable content) ---
+ios_app_id: 1494197457
+app_name: "White Balance Meter AI - KEV"
+appstore_link: "https://apps.apple.com/us/app/white-balance-meter-ai-kev/id1494197457"
+reviews_link: "https://apps.apple.com/us/app/white-balance-meter-ai-kev/id1494197457?see-all=reviews"
+playstore_link:
+app_icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/9e/9a/849e9a65-1993-4a1a-1cba-f582ce146f4a/AppIcon-0-0-1x_U007epad-0-1-0-85-220.jpeg/512x512bb.jpg"
+app_price: "$2.99"
+app_price_value: "2.99"
+# Fallback rating shown before the live App Store fetch resolves (JS overwrites these).
+app_rating: "4.6"
+app_rating_count: "1,221"
+app_version: "7.0.1"
+enable_smart_app_banner: true
+
+# --- App Preview video (pulled from the App Store) ---
+video_hls: "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo211/v4/77/1b/77/771b778b-035e-8b15-31af-ee086e34f065/P913553144_default.m3u8"
+video_poster: "https://is1-ssl.mzstatic.com/image/thumb/PurpleVideo211/v4/8f/54/24/8f5424f8-28e6-d77d-4474-980c9967d577/Job4d9d63b5-e6b5-456d-be74-2bf5b631c45c-176091491-PreviewImage_Preview_Image_Intermediate_nonvideo_343800782_1901128075-Time1727078144644.png/640x1386bb.jpg"
+
 presskit_download_link: "assets/KEV-Resources.zip"
 
-app_icon: # assets/appicon.png  # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
-app_name: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_price: # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description: KEV turns your iPhone or iPad into a professional and easy-to-use light meter. Minimalistic KEV analyzes live preview of the scene and gives you accurate white balance data in Kelvin.
-enable_smart_app_banner: true # Set to true to show a smart app banner at top of page on mobile devices.
-
-# Information About Yourself
-your_name: Satnam Singh
-your_link: https://kevapp.co/
-your_city:
-email_address: 29satnam@gmail.com
-facebook_username:
+# --- Author / social ---
+your_name: "Satnam Singh"
+your_link: "https://kevapp.co/"
+email_address: "29satnam@gmail.com"
 instagram_username: codetard
 twitter_username: codetard
 github_username: 29satnam
-youtube_username:
-
-# Feature List (Edit, add or remove features to be presented.)
-features:
-  - title: Real-time Temperature
-    description: Gets you color temperature in Kelvin in real-time.
-    fontawesome_icon_name: thermometer-full
-
-  - title: Compensation and Calculation
-    description: Ability to compensate and calculate the white balance readings.
-    fontawesome_icon_name: calculator
-
-  - title: Integral
-    description: Minimal yet integral point and shoot capability. A go-to light meter for photographers and videographers.
-    fontawesome_icon_name: star
-
-# Theme Settings
-topbar_color: "#fff"
-topbar_transparency: 1.0
-topbar_title_color: "#000"
-
-cover_image: # Replace with alternative image path or image URL.
-cover_overlay_color: "#ffffff"
-cover_overlay_transparency: 1.0
-
-device_color: coral # Set to: blue, black, yellow, coral or white.
-
-body_background_color: "#F8F8F8"
-
-link_color: "#1d63ea"
-
-app_title_color: "#000"
-app_price_color: "#000"
-app_description_color: "#000"
-
-feature_title_color: "#000000"
-feature_text_color: "#666666"
-
-feature_icons_foreground_color: "#1d63ea"
-feature_icons_background_color: "#e6e6e6"
-
-social_icons_foreground_color: "#666666"
-social_icons_background_color: "#e6e6e6"
-
-footer_text_color: "#666666"
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
 ####################################################
 
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed # You might prefer to minify using :compressed
+  style: compressed
 
-# Exclude these files from your production _site
 exclude:
   - LICENSE
   - README.md
+  - Gemfile
+  - Gemfile.lock
 
 collections:
   pages:
     output: true
     permalink: /:path/
 
-# Markdown rendering
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap

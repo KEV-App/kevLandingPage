@@ -1,81 +1,285 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    <div class="imageWrapper">
-      <div class="headerBackground">
-        <div class="container">
-          {% include header.html %}
-          <div class="iphonePreview">
+<body>
+	{% include nav.html %}
 
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 0 0" style="position: absolute;">
-              <clipPath id="screenMask" clipPathUnits="objectBoundingBox" transform="scale(0.00257, 0.00119)">
-                <path
-                  d="M6490.24,1234.36H6216.28c-2.57,0-10.55-.07-12.07-0.07a87.524,87.524,0,0,1-12-1.03,40.051,40.051,0,0,1-11.4-3.79,38.315,38.315,0,0,1-16.82-16.84,39.948,39.948,0,0,1-3.78-11.42,72.257,72.257,0,0,1-1.04-12.02c-0.06-1.83-.06-5.56-0.06-5.56V452.125h0s0.06-11.391.06-12.086a87.9,87.9,0,0,1,1.04-12.025,39.843,39.843,0,0,1,3.78-11.413,38.283,38.283,0,0,1,16.82-16.847,39.762,39.762,0,0,1,11.4-3.785,71.909,71.909,0,0,1,12-1.037c16.99-.567,36.32-0.061,34.51-0.061,5.02,0,6.5,3.439,6.63,6.962a35.611,35.611,0,0,0,1.2,8.156,21.326,21.326,0,0,0,19.18,15.592c2.28,0.192,6.78.355,6.78,0.355H6433.7s4.5-.059,6.79-0.251a21.348,21.348,0,0,0,19.18-15.591,35.582,35.582,0,0,0,1.19-8.154c0.13-3.523,1.61-6.962,6.64-6.962-1.81,0,17.52-.5,34.5.061a71.923,71.923,0,0,1,12.01,1.038,39.832,39.832,0,0,1,11.4,3.784,38.283,38.283,0,0,1,16.82,16.844,40.153,40.153,0,0,1,3.78,11.413,87.844,87.844,0,0,1,1.03,12.023c0,0.695.06,12.084,0.06,12.084h0V1183.64s0,3.72-.06,5.55a72.366,72.366,0,0,1-1.03,12.03,40.2,40.2,0,0,1-3.78,11.41,38.315,38.315,0,0,1-16.82,16.84,40.155,40.155,0,0,1-11.4,3.79,87.669,87.669,0,0,1-12.01,1.03c-1.52,0-9.5.07-12.07,0.07"
-                  transform="translate(-6159.12 -394.656)" />
-              </clipPath>
-            </svg>
+	<!-- ============ HERO ============ -->
+	<header class="hero">
+		<div class="wrap hero-grid">
+			<div class="hero-copy">
+				<span class="eyebrow">★ 4.5 / 5 · <b>The #1 White Balance app</b></span>
+				<h1>Pro <span class="grad">white balance</span> &amp; color temperature meter in your pocket.</h1>
+				<p class="lede">
+					KEV turns your iPhone or iPad into an accurate light meter. Point the
+					camera and read the <b>color temperature in Kelvin</b> in real time —
+					no extra hardware, calibrated against a Sekonic SpectroMaster.
+				</p>
+				<div class="hero-cta">
+					<a class="appbadge" href="{{ site.appstore_link }}" aria-label="Download on the App Store">
+						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="Download KEV on the App Store" width="180" height="56">
+					</a>
+				</div>
+				<div class="hero-meta">
+					<a href="{{ site.reviews_link }}" style="color:inherit"><span class="stars">★★★★★</span> <b data-rating>{{ site.app_rating }}</b> · <span data-rating-count>{{ site.app_rating_count }}</span> ratings</a>
+					<span class="dot"></span>
+					<span><b>{{ site.app_price }}</b> · one-time</span>
+					<span class="dot"></span>
+					<span>iPhone · iPad · <b>Apple&nbsp;Watch</b></span>
+				</div>
+			</div>
 
-            <div class="videoContainer hidden">
-              <video class="screenvideo" autoplay="autoplay" controls="controls">
-              </video>
-            </div>
+			<div class="phone-stage">
+				<div class="phone">
+					<div class="phone-glow"></div>
+					<video
+						class="hero-video"
+						data-hls="{{ site.video_hls }}"
+						poster="{{ site.video_poster }}"
+						autoplay muted loop playsinline preload="metadata"
+						aria-label="{{ site.app_name }} App Preview">
+					</video>
+				</div>
+			</div>
+		</div>
+	</header>
 
-            <img class="iphoneScreen hidden" src="" alt="">
+	<!-- ============ STATS ============ -->
+	<section class="stats">
+		<div class="wrap stats-grid">
+			<div class="stat"><div class="num"><span data-rating>{{ site.app_rating }}</span>★</div><div class="lab">App Store rating</div></div>
+			<div class="stat"><div class="num"><span data-rating-count>{{ site.app_rating_count }}</span>+</div><div class="lab">Genuine ratings</div></div>
+			<div class="stat"><div class="num">~100%</div><div class="lab">Calibrated accuracy</div></div>
+			<div class="stat"><div class="num">Kelvin</div><div class="lab">Real-time readings</div></div>
+		</div>
+	</section>
 
-            {% include screencontent.html %}
-          </div>
+	<!-- ============ REVIEWS ============ -->
+	<section class="section reviews" id="reviews">
+		<div class="wrap">
+			<div class="section-head reveal">
+				<span class="kicker">Loved on the App Store</span>
+				<h2>Rated <span data-rating>{{ site.app_rating }}</span>★ by photographers &amp; filmmakers</h2>
+				<p>
+					<a class="rating-link" href="{{ site.reviews_link }}">
+						<span class="rstars">★★★★★</span>
+						<span><b data-rating-count>{{ site.app_rating_count }}</b> Ratings on the App Store →</span>
+					</a>
+				</p>
+			</div>
+			<div class="review-grid reveal">
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Best camera app I've bought in years!</h3>
+					<p>As a cinematographer for over 20 years, I've been looking forever to replace my light meter with a digital one on my phone. I shoot primarily in LOG and color balance is key. This app has been amazing — highly recommend it.</p>
+					<span class="r-author">AJ, Zero Gravity Productions <span>· Moviesforever</span></span>
+				</a>
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Worth every penny</h3>
+					<p>Amazing. Astounding. You've set the bar. Back in the day I took a month of DSLR classes to master this skill — you broke it down and made it better with an iPhone, no less. I'm a customer for life.</p>
+					<span class="r-author">GamerFamilyFun <span>· App Store</span></span>
+				</a>
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Point accuracy and reliable!</h3>
+					<p>The app does the job very well, saving a lot of time in post-processing. If you are a photographer or a videographer, you need this app. Recommended 👍</p>
+					<span class="r-author">appseater <span>· App Store</span></span>
+				</a>
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Essential tool for video lighting</h3>
+					<p>I needed a tool to set my video light color temperature to match the ambient light. This gets me close enough to a good value where the video looks far more natural.</p>
+					<span class="r-author">Verified reviewer <span>· App Store</span></span>
+				</a>
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Worth it, even for one photo</h3>
+					<p>I bought this for one problematic multi-source, low-light shot. KEV gave me a Kelvin number, I dialed it into my editor, and the result was exactly what I wanted. So nice 😊</p>
+					<span class="r-author">Rdfaleph <span>· App Store</span></span>
+				</a>
+				<a class="review" href="{{ site.reviews_link }}">
+					<div class="r-stars">★★★★★</div>
+					<h3>Useful cross check</h3>
+					<p>Taking multiple measurements helps provide a range of reasonable white balance values and supports aesthetic judgement when processing RAW files.</p>
+					<span class="r-author">fritz314 <span>· App Store</span></span>
+				</a>
+			</div>
+		</div>
+	</section>
 
-          <div class="appInfo">
-            <div class="appIconShadow">
-              <svg width="0" height="0">
-                <defs>
-                  <clipPath id="shape120">
-                    <path id="shape" class="cls-1"
-                      d="M6821,495.533v-4.281c0-1.2-.04-2.4-0.04-3.642a57.7,57.7,0,0,0-.68-7.882,26.144,26.144,0,0,0-2.48-7.483,25.115,25.115,0,0,0-11.04-11.044,26.118,26.118,0,0,0-7.49-2.481,47.28,47.28,0,0,0-7.88-.68c-1.2-.04-2.4-0.04-3.64-0.04h-53.5c-1.2,0-2.4.04-3.64,0.04a57.813,57.813,0,0,0-7.88.68,26.323,26.323,0,0,0-7.49,2.481,25.115,25.115,0,0,0-11.04,11.044,26.144,26.144,0,0,0-2.48,7.483,47.313,47.313,0,0,0-.68,7.882c-0.04,1.2-.04,2.4-0.04,3.642v53.5c0,1.2.04,2.4,0.04,3.641a57.7,57.7,0,0,0,.68,7.883,26.137,26.137,0,0,0,2.48,7.482,25.115,25.115,0,0,0,11.04,11.044,26.261,26.261,0,0,0,7.49,2.481,47.28,47.28,0,0,0,7.88.68c1.2,0.04,2.4.04,3.64,0.04h53.5c1.2,0,2.4-.04,3.64-0.04a57.654,57.654,0,0,0,7.88-.68,26.057,26.057,0,0,0,7.49-2.481,25.115,25.115,0,0,0,11.04-11.044,26.137,26.137,0,0,0,2.48-7.482,47.316,47.316,0,0,0,.68-7.883c0.04-1.2.04-2.4,0.04-3.641V495.533h0Z"
-                      transform="translate(-6701 -458)" filter="url(#f1)" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <img class="appIconLarge" src="{{ site.app_icon }}">
-            </div>
-            <div class="appNamePriceContainer">
-              <h1 class="appName">
-                {{ site.app_name }}
-              </h1>
-              <h2 class="appPrice">
-                {{ site.app_price }}
-              </h2>
-            </div>
-            <div class="appDescriptionContainer">
-              <p class="appDescription">
-                {{ site.app_description }}
-              </p>
-            </div>            
-            <div class="appTestimonyContainer">
-              <p class="appTestimony">
-                {{ site.app_testimony }}
-              </p>
-            </div>
-            <div class="downloadButtonsContainer">
-              {% if site.playstore_link %}
-              <a class="playStoreLink" href="{{site.playstore_link}}">
-                <img class="playStore" src="assets/playstore.png">
-              </a>
-              {% endif %}
-              <a class="appStoreLink" href="{{site.appstore_link}}">
-                <img class="appStore" src="assets/appstore.png">
-              </a>
-            </div>
-          </div>
-          {% include features.html %}
-          {% include footer.html %}
-          {% include appstoreimages.html %}
-        </div>
-      </div>
-    </div>
-  </body>
+	<!-- ============ FEATURES ============ -->
+	<section class="section" id="features">
+		<div class="wrap">
+			<div class="section-head reveal">
+				<span class="kicker">Why KEV</span>
+				<h2>Everything a light meter should be — minus the $500 hardware.</h2>
+				<p>KEV uses AI to analyze the live preview and hand you accurate white balance data instantly.</p>
+			</div>
+			<div class="features">
+				<div class="card reveal">
+					<div class="ico">🌡️</div>
+					<h3>Real-time Kelvin</h3>
+					<p>Live color temperature in Kelvin the moment you point your camera at a scene or light source.</p>
+				</div>
+				<div class="card reveal">
+					<div class="ico">🧠</div>
+					<h3>AI scene analysis</h3>
+					<p>On-device AI reads the live preview and factors in lighting for dependable, accurate readings.</p>
+				</div>
+				<div class="card reveal">
+					<div class="ico">🎚️</div>
+					<h3>Compensate &amp; calculate</h3>
+					<p>Fine-tune white balance and tint, then calculate the exact correction you need on set.</p>
+				</div>
+				<div class="card reveal">
+					<div class="ico">📸</div>
+					<h3>Snapshot with data</h3>
+					<p>Capture a shot stamped with its color temperature reading and location for your notes.</p>
+				</div>
+				<div class="card reveal">
+					<div class="ico">🔍</div>
+					<h3>Manual focus &amp; 5× zoom</h3>
+					<p>Pinch to zoom up to 5× and focus manually to meter a precise, close-range area.</p>
+				</div>
+				<div class="card reveal">
+					<div class="ico">⌚</div>
+					<h3>Apple Watch companion</h3>
+					<p>Hot-shoe mount your iPhone and read color temperature straight from the KEV Watch app.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ HOW IT WORKS ============ -->
+	<section class="section how" id="how">
+		<div class="wrap">
+			<div class="section-head reveal">
+				<span class="kicker">Dead simple</span>
+				<h2>Perfect white balance in three steps.</h2>
+				<p>No sensor, no calibration target, no guesswork. Your built-in camera already has you covered.</p>
+			</div>
+			<div class="steps">
+				<div class="step reveal">
+					<h3>Point</h3>
+					<p>Aim your iPhone or iPad camera at the surface, subject or light source you want to measure.</p>
+				</div>
+				<div class="step reveal">
+					<h3>Read</h3>
+					<p>KEV instantly shows the color temperature in Kelvin plus tint — balance ambient and key light with confidence.</p>
+				</div>
+				<div class="step reveal">
+					<h3>Dial in</h3>
+					<p>Match the reading on your DSLR or cinema camera and nail white balance in-camera. Save hours in post.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ LANGUAGES / GLOBAL SEO ============ -->
+	<section class="section langs">
+		<div class="wrap">
+			<div class="section-head reveal">
+				<span class="kicker">Trusted worldwide</span>
+				<h2>One meter — every language of light.</h2>
+				<p>Photographers and gaffers everywhere rely on KEV for color temperature and white balance.</p>
+			</div>
+			<div class="lang-grid reveal">
+				<div class="lang"><span class="flag">🇺🇸</span><h4>English</h4><p>White balance meter · color temperature · Kelvin meter · tint meter · light meter · lumen &amp; exposure meter</p></div>
+				<div class="lang"><span class="flag">🇨🇳</span><h4>简体中文</h4><p>白平衡 · 色温 · 光度计 · 开尔文计 · 植物灯计 · 测光表</p></div>
+				<div class="lang"><span class="flag">🇹🇼</span><h4>繁體中文</h4><p>色溫 · 白平衡 · 開爾文計 · 測光表 · 植物燈計 · 色彩溫度</p></div>
+				<div class="lang"><span class="flag">🇯🇵</span><h4>日本語</h4><p>色温度 · ホワイトバランス・メーター · 露光メーター · スペクトロメーター</p></div>
+				<div class="lang"><span class="flag">🇷🇺</span><h4>Русский</h4><p>Баланс белого · цветовая температура · экспонометр · колориметр Кельвина</p></div>
+				<div class="lang"><span class="flag">🇪🇸</span><h4>Español</h4><p>Fotómetro · temperatura de color · espectrómetro · medidor de balance de blancos</p></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ CTA ============ -->
+	<section class="section" style="padding-top:0;">
+		<div class="wrap">
+			<div class="cta-band reveal">
+				<h2>Get the perfect white balance, every shot.</h2>
+				<p>Join hundreds of photographers and videographers metering color temperature the smart way.</p>
+				<div class="badges">
+					<a class="appbadge" href="{{ site.appstore_link }}" aria-label="Download on the App Store">
+						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="Download KEV on the App Store" width="180" height="56">
+					</a>
+				</div>
+				<div class="price">{{ site.app_price }} · one-time purchase · iPhone, iPad &amp; Apple Watch</div>
+			</div>
+		</div>
+	</section>
+
+	{% include site-footer.html %}
+
+	<!-- App Preview video (HLS) -->
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+	<script>
+		(function () {
+			var v = document.querySelector('.hero-video');
+			if (!v) return;
+			var src = v.dataset.hls;
+			function play() { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+			if (v.canPlayType('application/vnd.apple.mpegurl')) {
+				v.src = src; v.addEventListener('loadedmetadata', play);
+			} else if (window.Hls && Hls.isSupported()) {
+				var hls = new Hls({ capLevelToPlayerSize: true });
+				hls.loadSource(src); hls.attachMedia(v);
+				hls.on(Hls.Events.MANIFEST_PARSED, play);
+			} else {
+				v.src = src; play();
+			}
+		})();
+
+		// Scroll reveal
+		(function () {
+			var els = document.querySelectorAll('.reveal');
+			if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+			var io = new IntersectionObserver(function (entries) {
+				entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+			}, { threshold: 0.12 });
+			els.forEach(function (e) { io.observe(e); });
+		})();
+
+		// Live App Store ratings — sum userRatingCount across storefronts (JSONP), weighted average.
+		(function () {
+			var APP = {{ site.ios_app_id }};
+			var KEY = 'kev_ratings_v1', TTL = 43200000; // 12h
+			var countries = ('us cn gb ca au jp kr de fr it es ru br in nl mx tw hk sg th id ph vn se ch pl tr ua sa ae at be dk no fi pt cz gr il nz za ie ro hu cl ar co pe kw qa eg ma lk pk bd kz lt lv ee hr si sk bg rs lu is').split(' ');
+			function render(avg, count) {
+				document.querySelectorAll('[data-rating]').forEach(function (e) { e.textContent = avg.toFixed(1); });
+				document.querySelectorAll('[data-rating-count]').forEach(function (e) { e.textContent = count.toLocaleString('en-US'); });
+			}
+			try { var c = JSON.parse(localStorage.getItem(KEY)); if (c && Date.now() - c.t < TTL && c.count) { render(c.avg, c.count); return; } } catch (e) {}
+			var total = 0, weighted = 0, done = 0;
+			function finish() {
+				if (done < countries.length) return;
+				if (total > 0) {
+					var avg = weighted / total;
+					render(avg, total);
+					try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), avg: avg, count: total })); } catch (e) {}
+				}
+			}
+			countries.forEach(function (co, i) {
+				var cb = 'kevcb_' + i;
+				window[cb] = function (d) {
+					done++;
+					if (d && d.results && d.results[0]) {
+						var r = d.results[0], n = r.userRatingCount || 0, a = r.averageUserRating || 0;
+						total += n; weighted += a * n;
+					}
+					finish(); delete window[cb];
+				};
+				var s = document.createElement('script');
+				s.async = true;
+				s.src = 'https://itunes.apple.com/' + co + '/lookup?id=' + APP + '&callback=' + cb;
+				s.onerror = function () { done++; finish(); };
+				document.body.appendChild(s);
+			});
+		})();
+	</script>
+</body>
 </html>

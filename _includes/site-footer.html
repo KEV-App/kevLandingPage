@@ -1,0 +1,53 @@
+<footer class="foot">
+	<div class="wrap">
+		<div class="foot-grid">
+			<div>
+				<a class="brand" href="{{ '/' | relative_url }}" target="_self">
+					<img src="{{ site.app_icon }}" alt="{{ site.app_name }} icon" width="36" height="36">
+					<span>KEV</span>
+				</a>
+				<p>The #1 white balance &amp; color&nbsp;temperature meter for iPhone and iPad. Calibrated against a Sekonic SpectroMaster.</p>
+				<div class="foot-social">
+					{% if site.instagram_username %}
+					<a href="https://instagram.com/{{ site.instagram_username }}" aria-label="Instagram">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+					</a>
+					{% endif %}
+					{% if site.twitter_username %}
+					<a href="https://twitter.com/{{ site.twitter_username }}" aria-label="X / Twitter">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+					</a>
+					{% endif %}
+					{% if site.github_username %}
+					<a href="https://github.com/{{ site.github_username }}" aria-label="GitHub">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.21 11.16.6.11.82-.25.82-.56v-2c-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.34-1.73-1.34-1.73-1.09-.73.08-.72.08-.72 1.2.08 1.84 1.21 1.84 1.21 1.07 1.8 2.8 1.28 3.49.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.31-5.47-5.83 0-1.29.47-2.34 1.24-3.17-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.21a11.6 11.6 0 0 1 6 0c2.29-1.53 3.3-1.21 3.3-1.21.66 1.66.25 2.88.12 3.18.77.83 1.23 1.88 1.23 3.17 0 4.53-2.81 5.53-5.49 5.82.43.36.81 1.09.81 2.2v3.26c0 .31.22.68.83.56A12.01 12.01 0 0 0 24 12.29C24 5.78 18.63.5 12 .5z"/></svg>
+					</a>
+					{% endif %}
+					{% if site.email_address %}
+					<a href="mailto:{{ site.email_address }}" aria-label="Email">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+					</a>
+					{% endif %}
+				</div>
+			</div>
+			<div class="foot-links">
+				<div class="foot-col">
+					<h5>App</h5>
+					<a href="{{ site.appstore_link }}">Download on App Store</a>
+					<a href="{{ '/#features' | relative_url }}" target="_self">Features</a>
+					<a href="{{ '/changelog/' | relative_url }}" target="_self">What's New</a>
+				</div>
+				<div class="foot-col">
+					<h5>Resources</h5>
+					{% if site.presskit_download_link %}<a href="{{ site.presskit_download_link | relative_url }}">Marketing Kit</a>{% endif %}
+					<a href="{{ '/privacy/' | relative_url }}" target="_self">Privacy Policy</a>
+					<a href="mailto:{{ site.email_address }}">Contact &amp; Support</a>
+				</div>
+			</div>
+		</div>
+		<div class="foot-bottom">
+			<span>© {{ 'now' | date: "%Y" }} {{ site.your_name }}. KEV — White Balance Meter AI.</span>
+			<span>Made with care for photographers &amp; videographers worldwide.</span>
+		</div>
+	</div>
+</footer>

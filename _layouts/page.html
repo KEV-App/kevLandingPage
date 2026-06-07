@@ -1,22 +1,24 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="subPageBody">
-    <div class="headerBackground subPageHeaderBackground">
-      <div class="container subPageContainer">
-        {% include header.html %}
-        <article class="page markdown-body">
-          {{ content }}
-        </article>
-      </div>
-      {% include appstoreimages.html %}
-    </div>
-  </body>
+<body>
+	{% include nav.html %}
+
+	<main class="subpage">
+		<div class="wrap">
+			<a class="back-link" href="{{ '/' | relative_url }}" target="_self">← Back to KEV</a>
+			<article class="page markdown-body">
+				{{ content }}
+			</article>
+		</div>
+	</main>
+
+	{% include site-footer.html %}
+</body>
 
 </html>
