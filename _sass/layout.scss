@@ -444,6 +444,69 @@
 	.meter-read .k { font-size: 42px; }
 }
 
+// use cases (keyword landing tiles)
+.usecases {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+.uc {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	padding: 24px;
+	transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.uc:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: transparent; }
+.uc h3 { font-size: 17px; margin-bottom: 8px; letter-spacing: -0.01em; }
+.uc p { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.uc .tag {
+	display: inline-block;
+	font: 700 11px/1 ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+	letter-spacing: 0.08em;
+	color: var(--accent);
+	background: var(--kelvin-soft);
+	padding: 6px 10px;
+	border-radius: 999px;
+	margin-bottom: 14px;
+	text-transform: uppercase;
+}
+@media (max-width: 900px) { .usecases { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .usecases { grid-template-columns: 1fr; } }
+
+// FAQ (rich-results candidate)
+.faq { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 18px 22px;
+	transition: border-color .2s ease, box-shadow .2s ease;
+}
+.faq details[open] { border-color: transparent; box-shadow: var(--shadow); }
+.faq summary {
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 17px;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	color: var(--text);
+	letter-spacing: -0.01em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+	content: "+";
+	font-weight: 400;
+	font-size: 24px;
+	color: var(--muted);
+	transition: transform .2s ease;
+}
+.faq details[open] summary::after { content: "-"; }
+.faq p { margin-top: 12px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+
 // how it works
 .how { background: var(--surface); }
 .steps {

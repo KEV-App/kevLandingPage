@@ -98,4 +98,30 @@
 		"url": "{{ '/' | absolute_url }}"
 	}
 	</script>
+	{% if page.url == '/' %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{ "@type": "Question", "name": "What is a white balance meter?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "A white balance meter measures the color of light in a scene and tells you the color temperature in Kelvin (and tint), so you can set your camera's white balance to match. KEV does this in real time using your iPhone or iPad camera." } },
+			{ "@type": "Question", "name": "What does color temperature in Kelvin mean?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "Color temperature is how warm or cool a light source looks, measured in Kelvin (K). Tungsten is roughly 2800-3200K (warm), daylight is around 5500K, and shade or overcast sky is 6000K+ (cool). Setting your camera's white balance to the Kelvin value of the light makes whites look white." } },
+			{ "@type": "Question", "name": "How do I measure color temperature with my iPhone?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "Install KEV, open the app and point your iPhone or iPad camera at the scene or light source. KEV uses AI to analyze the live preview and shows the color temperature in Kelvin (plus tint) in real time. No external sensor needed." } },
+			{ "@type": "Question", "name": "Is KEV an accurate light meter?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "KEV was calibrated against a Sekonic C-700R-U SpectroMaster Color Meter and is rated 4.5 stars by 1,000+ users on the App Store. Accuracy ranges from fair to near 100% depending on lighting conditions and your device's camera." } },
+			{ "@type": "Question", "name": "Can I use KEV as a tint meter?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "Yes. KEV reads tint (magenta/green shift) alongside Kelvin, so you can correct green LED or magenta cast in-camera instead of fixing it in post." } },
+			{ "@type": "Question", "name": "Does KEV work for video and filmmaking?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "Yes. KEV is used by videographers, cinematographers and gaffers to balance ambient and key light, match white balance across cameras, gel HMI to tungsten and dial in practical LEDs, saving time in post-production." } },
+			{ "@type": "Question", "name": "What is the best white balance for daylight?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "For midday sun on a clear day, around 5500K is the standard daylight reference. For shade or overcast skies, use 6500 to 7500K. KEV gives you the exact Kelvin number for the scene you are actually in." } },
+			{ "@type": "Question", "name": "Is KEV free?",
+			  "acceptedAnswer": { "@type": "Answer", "text": "KEV is a one-time purchase on the App Store with no ads, no subscriptions and no in-app purchases. Buy it once and use it on iPhone, iPad and Apple Watch." } }
+		]
+	}
+	</script>
+	{% endif %}
 </head>
