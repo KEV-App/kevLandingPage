@@ -126,5 +126,79 @@
 		]
 	}
 	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		"name": "Creator videos featuring KEV",
+		"itemListElement": [
+			{ "@type": "VideoObject", "position": 1,
+			  "name": "rileyphotos - on-set white balance meter demo with KEV",
+			  "description": "Filmmaker rileyphotos demos KEV measuring color temperature in Kelvin during a real shoot.",
+			  "thumbnailUrl": "https://i.ytimg.com/vi/sT78ajMQ4Iw/hqdefault.jpg",
+			  "uploadDate": "2024-03-01",
+			  "embedUrl": "https://www.youtube.com/embed/sT78ajMQ4Iw",
+			  "contentUrl": "https://www.youtube.com/watch?v=sT78ajMQ4Iw" },
+			{ "@type": "VideoObject", "position": 2,
+			  "name": "KEV review and field test",
+			  "description": "Independent YouTube review of the KEV white balance meter showing real-world Kelvin readings.",
+			  "thumbnailUrl": "https://i.ytimg.com/vi/S3hLAEOlXCo/hqdefault.jpg",
+			  "uploadDate": "2024-06-01",
+			  "embedUrl": "https://www.youtube.com/embed/S3hLAEOlXCo",
+			  "contentUrl": "https://www.youtube.com/watch?v=S3hLAEOlXCo" },
+			{ "@type": "VideoObject", "position": 3,
+			  "name": "KEV walkthrough",
+			  "description": "Detailed walkthrough of the KEV color temperature metering workflow (legacy UI, same functionality).",
+			  "thumbnailUrl": "https://i.ytimg.com/vi/C4oihcY7Dh4/hqdefault.jpg",
+			  "uploadDate": "2022-09-01",
+			  "embedUrl": "https://www.youtube.com/embed/C4oihcY7Dh4",
+			  "contentUrl": "https://www.youtube.com/watch?v=C4oihcY7Dh4" },
+			{ "@type": "VideoObject", "position": 4,
+			  "name": "KEV color temperature demo",
+			  "description": "Color temperature metering across mixed lighting setups using KEV (legacy UI, same functionality).",
+			  "thumbnailUrl": "https://i.ytimg.com/vi/C9O3nr87Mtk/hqdefault.jpg",
+			  "uploadDate": "2022-04-01",
+			  "embedUrl": "https://www.youtube.com/embed/C9O3nr87Mtk",
+			  "contentUrl": "https://www.youtube.com/watch?v=C9O3nr87Mtk" }
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Product",
+		"name": "{{ site.app_name }}",
+		"image": "{{ site.app_icon }}",
+		"description": {{ site.description | jsonify }},
+		"brand": { "@type": "Brand", "name": "KEV" },
+		"offers": {
+			"@type": "Offer",
+			"price": "{{ site.app_price_value }}",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock",
+			"url": "{{ site.appstore_link }}"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "{{ site.app_rating }}",
+			"ratingCount": "{{ site.app_rating_count | remove: ',' }}",
+			"bestRating": "5", "worstRating": "1"
+		},
+		"review": [
+			{ "@type": "Review", "author": { "@type": "Person", "name": "AJ, Zero Gravity Productions" },
+			  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+			  "name": "Best camera app I've bought in years!",
+			  "reviewBody": "As a cinematographer for over 20 years, I've been looking forever to replace my light meter with a digital one on my phone. This app has been amazing - highly recommend it." },
+			{ "@type": "Review", "author": { "@type": "Person", "name": "GamerFamilyFun" },
+			  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+			  "name": "Worth every penny",
+			  "reviewBody": "Amazing. Astounding. You've set the bar. Back in the day I took a month of DSLR classes to master this skill - you broke it down and made it better with an iPhone." },
+			{ "@type": "Review", "author": { "@type": "Person", "name": "appseater" },
+			  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+			  "name": "Point accuracy and reliable!",
+			  "reviewBody": "The app does the job very well, saving a lot of time in post-processing. If you are a photographer or videographer, you need this app." }
+		]
+	}
+	</script>
 	{% endif %}
 </head>

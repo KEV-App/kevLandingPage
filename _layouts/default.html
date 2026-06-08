@@ -70,7 +70,9 @@
 					</a>
 				</p>
 			</div>
-			<div class="review-grid reveal">
+			<div class="review-carousel reveal">
+				<button type="button" class="rc-arrow rc-prev" aria-label="Previous reviews">‹</button>
+				<div class="review-track" role="region" aria-label="App Store reviews">
 				<a class="review" href="{{ site.reviews_link }}">
 					<div class="r-stars">★★★★★</div>
 					<h3>Best camera app I've bought in years!</h3>
@@ -107,6 +109,8 @@
 					<p>Taking multiple measurements helps provide a range of reasonable white balance values and supports aesthetic judgement when processing RAW files.</p>
 					<span class="r-author">fritz314 <span>· App Store</span></span>
 				</a>
+				</div>
+				<button type="button" class="rc-arrow rc-next" aria-label="Next reviews">›</button>
 			</div>
 		</div>
 	</section>
@@ -273,14 +277,48 @@
 			<div class="section-head reveal">
 				<span class="kicker">As seen on</span>
 				<h2>Filmmakers &amp; photographers using KEV.</h2>
-				<p>Real reviews and on-set demos from creators on YouTube and Instagram.</p>
+				<p>Real reviews and on-set demos from creators on Instagram and YouTube.</p>
 			</div>
-			<div class="press-grid">
 
-				<!-- YouTube: rileyphotos (current) -->
-				<article class="creator s-6 ratio-16x9 reveal">
+			<!-- Instagram row -->
+			<h3 class="press-subhead reveal"><span class="ph-pill ig">◉ Instagram</span> Reels from real creators</h3>
+			<div class="press-grid ig-row">
+				<article class="creator ratio-9x16 reveal">
 					<div class="frame">
-						<iframe src="https://www.youtube.com/embed/sT78ajMQ4Iw?start=26&rel=0"
+						<iframe src="https://www.instagram.com/reel/Cz6nmNCxwiS/embed/?cr=1&amp;v=14&amp;wp=540&amp;rd=https%3A%2F%2Fkevapp.co"
+							title="KEV white balance meter Instagram reel"
+							loading="lazy"
+							allow="encrypted-media; picture-in-picture; web-share"
+							allowfullscreen scrolling="no" frameborder="0"></iframe>
+					</div>
+					<div class="meta">
+						<span class="source ig">◉ Instagram · Reel</span>
+						<h3>Quick metering reel</h3>
+						<p>KEV in action - color temperature in seconds.</p>
+					</div>
+				</article>
+				<article class="creator ratio-9x16 reveal">
+					<div class="frame">
+						<iframe src="https://www.instagram.com/p/C_yIpQ7uidw/embed/?cr=1&amp;v=14&amp;wp=540&amp;rd=https%3A%2F%2Fkevapp.co"
+							title="KEV used on-set Instagram post"
+							loading="lazy"
+							allow="encrypted-media; picture-in-picture; web-share"
+							allowfullscreen scrolling="no" frameborder="0"></iframe>
+					</div>
+					<div class="meta">
+						<span class="source ig">◉ Instagram · Post</span>
+						<h3>Photographer on-set with KEV</h3>
+						<p>A working photographer using KEV on a shoot.</p>
+					</div>
+				</article>
+			</div>
+
+			<!-- YouTube row -->
+			<h3 class="press-subhead reveal" style="margin-top:48px;"><span class="ph-pill yt">▶ YouTube</span> Reviews &amp; walkthroughs</h3>
+			<div class="press-grid yt-row">
+				<article class="creator ratio-16x9 reveal">
+					<div class="frame">
+						<iframe src="https://www.youtube.com/embed/sT78ajMQ4Iw?start=26&amp;rel=0"
 							title="rileyphotos demo of KEV white balance meter"
 							loading="lazy"
 							allow="accelerometer; encrypted-media; picture-in-picture; web-share"
@@ -289,15 +327,13 @@
 					<div class="meta">
 						<span class="source yt">▶ YouTube · rileyphotos</span>
 						<h3>On-set white balance meter demo</h3>
-						<p>Walkthrough of metering color temperature with KEV in a real shoot.</p>
+						<p>Metering color temperature with KEV in a real shoot.</p>
 					</div>
 				</article>
-
-				<!-- YouTube: S3hLAEOlXCo (current) -->
-				<article class="creator s-6 ratio-16x9 reveal">
+				<article class="creator ratio-16x9 reveal">
 					<div class="frame">
 						<iframe src="https://www.youtube.com/embed/S3hLAEOlXCo?rel=0"
-							title="KEV white balance meter review"
+							title="KEV white balance meter review and field test"
 							loading="lazy"
 							allow="accelerometer; encrypted-media; picture-in-picture; web-share"
 							allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -305,15 +341,13 @@
 					<div class="meta">
 						<span class="source yt">▶ YouTube</span>
 						<h3>KEV review &amp; field test</h3>
-						<p>Independent review showing real-world color temperature readings.</p>
+						<p>Independent review with real-world color temperature readings.</p>
 					</div>
 				</article>
-
-				<!-- YouTube: C4oihcY7Dh4 (legacy UI) -->
-				<article class="creator s-6 ratio-16x9 reveal">
+				<article class="creator ratio-16x9 reveal">
 					<div class="frame">
 						<iframe src="https://www.youtube.com/embed/C4oihcY7Dh4?rel=0"
-							title="KEV walkthrough (legacy UI)"
+							title="KEV walkthrough"
 							loading="lazy"
 							allow="accelerometer; encrypted-media; picture-in-picture; web-share"
 							allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -321,16 +355,14 @@
 					<div class="meta">
 						<span class="source yt">▶ YouTube</span>
 						<h3>KEV walkthrough</h3>
-						<p>Detailed walkthrough of the app's metering workflow.</p>
+						<p>Detailed walkthrough of the metering workflow.</p>
 						<span class="legacy">Older UI · same functionality</span>
 					</div>
 				</article>
-
-				<!-- YouTube: C9O3nr87Mtk (legacy UI) -->
-				<article class="creator s-6 ratio-16x9 reveal">
+				<article class="creator ratio-16x9 reveal">
 					<div class="frame">
-						<iframe src="https://www.youtube.com/embed/C9O3nr87Mtk?start=1&rel=0"
-							title="KEV color temperature demo (legacy UI)"
+						<iframe src="https://www.youtube.com/embed/C9O3nr87Mtk?start=1&amp;rel=0"
+							title="KEV color temperature demo"
 							loading="lazy"
 							allow="accelerometer; encrypted-media; picture-in-picture; web-share"
 							allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -342,39 +374,6 @@
 						<span class="legacy">Older UI · same functionality</span>
 					</div>
 				</article>
-
-				<!-- Instagram Reel: Cz6nmNCxwiS -->
-				<article class="creator s-6 ratio-9x16 reveal">
-					<div class="frame">
-						<iframe src="https://www.instagram.com/reel/Cz6nmNCxwiS/embed/?cr=1&amp;v=14&amp;wp=540&amp;rd=https%3A%2F%2Fkevapp.co"
-							title="KEV Instagram reel"
-							loading="lazy"
-							allow="encrypted-media; picture-in-picture; web-share"
-							allowfullscreen scrolling="no" frameborder="0"></iframe>
-					</div>
-					<div class="meta">
-						<span class="source ig">◉ Instagram · Reel</span>
-						<h3>Quick metering reel</h3>
-						<p>KEV in action - color temperature in seconds.</p>
-					</div>
-				</article>
-
-				<!-- Instagram Post: C_yIpQ7uidw -->
-				<article class="creator s-6 ratio-9x16 reveal">
-					<div class="frame">
-						<iframe src="https://www.instagram.com/p/C_yIpQ7uidw/embed/?cr=1&amp;v=14&amp;wp=540&amp;rd=https%3A%2F%2Fkevapp.co"
-							title="KEV Instagram post"
-							loading="lazy"
-							allow="encrypted-media; picture-in-picture; web-share"
-							allowfullscreen scrolling="no" frameborder="0"></iframe>
-					</div>
-					<div class="meta">
-						<span class="source ig">◉ Instagram · Post</span>
-						<h3>Photographer on-set with KEV</h3>
-						<p>How a working photographer uses KEV on a shoot.</p>
-					</div>
-				</article>
-
 			</div>
 		</div>
 	</section>
@@ -540,6 +539,29 @@
 				if (ticking) return; ticking = true;
 				window.requestAnimationFrame(function () { ticking = false; onScroll(); });
 			}, { passive: true });
+		})();
+
+		// Review carousel
+		(function () {
+			var track = document.querySelector('.review-track');
+			if (!track) return;
+			var prev = document.querySelector('.rc-prev');
+			var next = document.querySelector('.rc-next');
+			function step() { return Math.max(280, Math.round(track.clientWidth * 0.85)); }
+			function scroll(dir) { track.scrollBy({ left: dir * step(), behavior: 'smooth' }); }
+			if (prev) prev.addEventListener('click', function () { scroll(-1); });
+			if (next) next.addEventListener('click', function () { scroll(1); });
+			// auto-advance unless user hovers/touches
+			var paused = false, idx = 0;
+			track.addEventListener('mouseenter', function () { paused = true; });
+			track.addEventListener('mouseleave', function () { paused = false; });
+			track.addEventListener('touchstart', function () { paused = true; }, { passive: true });
+			setInterval(function () {
+				if (paused) return;
+				var max = track.scrollWidth - track.clientWidth - 4;
+				if (track.scrollLeft >= max) { track.scrollTo({ left: 0, behavior: 'smooth' }); }
+				else { scroll(1); }
+			}, 5500);
 		})();
 
 		// Scroll reveal
