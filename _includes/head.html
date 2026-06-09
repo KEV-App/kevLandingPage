@@ -109,7 +109,7 @@
 		"name": "{{ site.app_name }} - App Preview",
 		"description": "App preview of KEV - the white balance and color temperature meter for iPhone and iPad. Real-time Kelvin readout, magenta/green tint, snapshot with data and Apple Watch companion.",
 		"thumbnailUrl": "{{ site.video_poster }}",
-		"uploadDate": "2024-09-23",
+		"uploadDate": "2024-09-23T00:00:00+00:00",
 		"contentUrl": "{{ site.video_hls }}",
 		"embedUrl": "{{ '/' | absolute_url }}",
 		"publisher": { "@type": "Organization", "name": "KEV",
@@ -170,28 +170,28 @@
 			  "name": "rileyphotos - on-set white balance meter demo with KEV",
 			  "description": "Filmmaker rileyphotos demos KEV measuring color temperature in Kelvin during a real shoot.",
 			  "thumbnailUrl": "https://i.ytimg.com/vi/sT78ajMQ4Iw/hqdefault.jpg",
-			  "uploadDate": "2024-03-01",
+			  "uploadDate": "2024-03-01T00:00:00+00:00",
 			  "embedUrl": "https://www.youtube.com/embed/sT78ajMQ4Iw",
 			  "contentUrl": "https://www.youtube.com/watch?v=sT78ajMQ4Iw" },
 			{ "@type": "VideoObject", "position": 2,
 			  "name": "KEV review and field test",
 			  "description": "Independent YouTube review of the KEV white balance meter showing real-world Kelvin readings.",
 			  "thumbnailUrl": "https://i.ytimg.com/vi/S3hLAEOlXCo/hqdefault.jpg",
-			  "uploadDate": "2024-06-01",
+			  "uploadDate": "2024-06-01T00:00:00+00:00",
 			  "embedUrl": "https://www.youtube.com/embed/S3hLAEOlXCo",
 			  "contentUrl": "https://www.youtube.com/watch?v=S3hLAEOlXCo" },
 			{ "@type": "VideoObject", "position": 3,
 			  "name": "KEV walkthrough",
 			  "description": "Detailed walkthrough of the KEV color temperature metering workflow (legacy UI, same functionality).",
 			  "thumbnailUrl": "https://i.ytimg.com/vi/C4oihcY7Dh4/hqdefault.jpg",
-			  "uploadDate": "2022-09-01",
+			  "uploadDate": "2022-09-01T00:00:00+00:00",
 			  "embedUrl": "https://www.youtube.com/embed/C4oihcY7Dh4",
 			  "contentUrl": "https://www.youtube.com/watch?v=C4oihcY7Dh4" },
 			{ "@type": "VideoObject", "position": 4,
 			  "name": "KEV color temperature demo",
 			  "description": "Color temperature metering across mixed lighting setups using KEV (legacy UI, same functionality).",
 			  "thumbnailUrl": "https://i.ytimg.com/vi/C9O3nr87Mtk/hqdefault.jpg",
-			  "uploadDate": "2022-04-01",
+			  "uploadDate": "2022-04-01T00:00:00+00:00",
 			  "embedUrl": "https://www.youtube.com/embed/C9O3nr87Mtk",
 			  "contentUrl": "https://www.youtube.com/watch?v=C9O3nr87Mtk" }
 		]
@@ -210,7 +210,35 @@
 			"price": "{{ site.app_price_value }}",
 			"priceCurrency": "USD",
 			"availability": "https://schema.org/InStock",
-			"url": "{{ site.appstore_link }}"
+			"url": "{{ site.appstore_link }}",
+			"itemCondition": "https://schema.org/NewCondition",
+			"shippingDetails": {
+				"@type": "OfferShippingDetails",
+				"shippingRate": {
+					"@type": "MonetaryAmount",
+					"value": "0",
+					"currency": "USD"
+				},
+				"shippingDestination": {
+					"@type": "DefinedRegion",
+					"geoMidpoint": { "@type": "GeoCoordinates", "latitude": "0", "longitude": "0" }
+				},
+				"deliveryTime": {
+					"@type": "ShippingDeliveryTime",
+					"handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+					"transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+				},
+				"description": "Digital download from the Apple App Store. No physical shipping."
+			},
+			"hasMerchantReturnPolicy": {
+				"@type": "MerchantReturnPolicy",
+				"applicableCountry": "US",
+				"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+				"merchantReturnDays": 14,
+				"returnMethod": "https://schema.org/ReturnByMail",
+				"returnFees": "https://schema.org/FreeReturn",
+				"url": "https://support.apple.com/en-us/HT204084"
+			}
 		},
 		"aggregateRating": {
 			"@type": "AggregateRating",
