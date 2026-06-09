@@ -32,13 +32,20 @@
 			</div>
 
 			<div class="phone-stage">
-				<div class="phone" id="phoneCard">
+				<div class="phone" id="phoneCard" itemscope itemtype="https://schema.org/VideoObject">
+					<meta itemprop="name" content="{{ site.app_name }} - App Preview">
+					<meta itemprop="description" content="Real-time color temperature in Kelvin and tint, snapshot with data and Apple Watch companion. The white balance meter for iPhone and iPad.">
+					<meta itemprop="uploadDate" content="2024-09-23">
+					<meta itemprop="thumbnailUrl" content="{{ site.video_poster }}">
+					<meta itemprop="contentUrl" content="{{ site.video_hls }}">
+					<meta itemprop="embedUrl" content="{{ '/' | absolute_url }}">
 					<div class="phone-glow"></div>
 					<video
 						class="hero-video"
 						data-hls="{{ site.video_hls }}"
 						poster="{{ site.video_poster }}"
 						autoplay muted loop playsinline preload="metadata"
+						title="{{ site.app_name }} - App Preview"
 						aria-label="{{ site.app_name }} App Preview">
 					</video>
 				</div>

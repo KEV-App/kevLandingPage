@@ -105,6 +105,22 @@
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
+		"@type": "VideoObject",
+		"name": "{{ site.app_name }} - App Preview",
+		"description": "App preview of KEV - the white balance and color temperature meter for iPhone and iPad. Real-time Kelvin readout, magenta/green tint, snapshot with data and Apple Watch companion.",
+		"thumbnailUrl": "{{ site.video_poster }}",
+		"uploadDate": "2024-09-23",
+		"contentUrl": "{{ site.video_hls }}",
+		"embedUrl": "{{ '/' | absolute_url }}",
+		"publisher": { "@type": "Organization", "name": "KEV",
+			"logo": { "@type": "ImageObject", "url": "{{ site.app_icon }}" } },
+		"isFamilyFriendly": true,
+		"inLanguage": "en"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
 		"@type": "HowTo",
 		"name": "How to get perfect white balance with your iPhone",
 		"description": "Use the KEV white balance meter app to read color temperature in Kelvin and dial it into any DSLR, mirrorless or cinema camera.",
