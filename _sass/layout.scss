@@ -276,7 +276,8 @@
 }
 
 // ---------- Reviews / social proof ----------
-.reviews { padding-top: 80px; padding-bottom: 80px; }
+.reviews { padding-top: 28px; padding-bottom: 36px; }
+.reviews .review-carousel { margin-top: 0; }
 .rating-link {
 	display: inline-flex;
 	align-items: center;
