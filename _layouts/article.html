@@ -1,0 +1,117 @@
+---
+# Article layout - Article + FAQPage + HowTo schema for AI Overviews
+---
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include head.html %}
+
+<body>
+	{% include nav.html %}
+
+	<main class="article">
+		<div class="wrap article-wrap">
+			<nav class="crumbs" aria-label="Breadcrumb">
+				<a href="{{ '/' | relative_url }}" target="_self">KEV</a>
+				<span>›</span>
+				<a href="{{ '/learn/' | relative_url }}" target="_self">Learn</a>
+				<span>›</span>
+				<span aria-current="page">{{ page.title }}</span>
+			</nav>
+
+			<header class="art-head">
+				{% if page.kicker %}<span class="kicker">{{ page.kicker }}</span>{% endif %}
+				<h1>{{ page.title }}</h1>
+				{% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+				<div class="art-meta">
+					{% if page.read_time %}<span>⏱ {{ page.read_time }} min read</span>{% endif %}
+					{% if page.updated %}<span>· Updated {{ page.updated | date: "%b %Y" }}</span>{% endif %}
+				</div>
+			</header>
+
+			<article class="art-body markdown-body">
+				{{ content }}
+			</article>
+
+			<aside class="art-cta">
+				<div class="art-cta-inner">
+					<img src="{{ site.app_icon }}" alt="{{ site.app_name }}" width="64" height="64">
+					<div>
+						<h3>Try KEV — White Balance Meter for iPhone</h3>
+						<p>Real-time color temperature in Kelvin. Calibrated against a Sekonic SpectroMaster.</p>
+					</div>
+					<a class="appbadge" href="{{ site.appstore_link }}" aria-label="Download on the App Store">
+						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="Download on the App Store" width="160" height="50">
+					</a>
+				</div>
+			</aside>
+
+			{% if page.related %}
+			<section class="art-related">
+				<h2>Keep learning</h2>
+				<div class="art-rel-grid">
+					{% for r in page.related %}
+					<a class="art-rel" href="{{ r.url | relative_url }}" target="_self">
+						<span class="kicker">{{ r.kicker | default: 'Guide' }}</span>
+						<h3>{{ r.title }}</h3>
+					</a>
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
+		</div>
+	</main>
+
+	{% include site-footer.html %}
+
+	<!-- Article schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		"headline": {{ page.title | jsonify }},
+		"description": {{ page.summary | default: page.title | jsonify }},
+		"image": "{{ site.app_icon }}",
+		"datePublished": "{{ page.published | default: '2026-06-01' }}",
+		"dateModified": "{{ page.updated | default: page.published | default: '2026-06-01' }}",
+		"author": { "@type": "Person", "name": "{{ site.your_name }}" },
+		"publisher": { "@type": "Organization", "name": "KEV",
+			"logo": { "@type": "ImageObject", "url": "{{ site.app_icon }}" } },
+		"mainEntityOfPage": "{{ page.url | absolute_url }}"
+	}
+	</script>
+
+	{% if page.faqs %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+		{% for q in page.faqs %}
+			{ "@type": "Question", "name": {{ q.q | jsonify }},
+			  "acceptedAnswer": { "@type": "Answer", "text": {{ q.a | jsonify }} } }{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+		]
+	}
+	</script>
+	{% endif %}
+
+	{% if page.howto %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "HowTo",
+		"name": {{ page.howto.name | jsonify }},
+		"description": {{ page.howto.description | jsonify }},
+		"step": [
+		{% for s in page.howto.steps %}
+			{ "@type": "HowToStep", "position": {{ forloop.index }},
+			  "name": {{ s.name | jsonify }}, "text": {{ s.text | jsonify }} }{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+		]
+	}
+	</script>
+	{% endif %}
+</body>
+
+</html>
