@@ -265,10 +265,7 @@
 	font-size: 30px;
 	font-weight: 800;
 	letter-spacing: -0.02em;
-	background: var(--kelvin-text);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: var(--text);
 }
 .stat .lab { color: var(--muted); font-size: 14px; margin-top: 4px; }
 @media (max-width: 620px) {
