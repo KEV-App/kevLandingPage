@@ -42,8 +42,10 @@ app_version: "7.0.1"
 enable_smart_app_banner: true
 
 # --- App Preview video (pulled from the App Store) ---
+video_mp4: "/assets/videos/app-preview.mp4"
 video_hls: "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo211/v4/77/1b/77/771b778b-035e-8b15-31af-ee086e34f065/P913553144_default.m3u8"
-video_poster: "https://is1-ssl.mzstatic.com/image/thumb/PurpleVideo211/v4/8f/54/24/8f5424f8-28e6-d77d-4474-980c9967d577/Job4d9d63b5-e6b5-456d-be74-2bf5b631c45c-176091491-PreviewImage_Preview_Image_Intermediate_nonvideo_343800782_1901128075-Time1727078144644.png/640x1386bb.jpg"
+video_poster: "/assets/videos/app-preview-poster.jpg"
+video_poster_remote: "https://is1-ssl.mzstatic.com/image/thumb/PurpleVideo211/v4/8f/54/24/8f5424f8-28e6-d77d-4474-980c9967d577/Job4d9d63b5-e6b5-456d-be74-2bf5b631c45c-176091491-PreviewImage_Preview_Image_Intermediate_nonvideo_343800782_1901128075-Time1727078144644.png/640x1386bb.jpg"
 
 presskit_download_link: "assets/KEV-Resources.zip"
 

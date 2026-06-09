@@ -36,17 +36,19 @@
 					<meta itemprop="name" content="{{ site.app_name }} - App Preview">
 					<meta itemprop="description" content="Real-time color temperature in Kelvin and tint, snapshot with data and Apple Watch companion. The white balance meter for iPhone and iPad.">
 					<meta itemprop="uploadDate" content="2024-09-23T00:00:00+00:00">
-					<meta itemprop="thumbnailUrl" content="{{ site.video_poster }}">
-					<meta itemprop="contentUrl" content="{{ site.video_hls }}">
+					<meta itemprop="duration" content="PT29S">
+					<meta itemprop="thumbnailUrl" content="{{ site.video_poster | absolute_url }}">
+					<meta itemprop="contentUrl" content="{{ site.video_mp4 | absolute_url }}">
 					<meta itemprop="embedUrl" content="{{ '/' | absolute_url }}">
 					<div class="phone-glow"></div>
 					<video
 						class="hero-video"
-						data-hls="{{ site.video_hls }}"
-						poster="{{ site.video_poster }}"
+						poster="{{ site.video_poster | relative_url }}"
 						autoplay muted loop playsinline preload="metadata"
 						title="{{ site.app_name }} - App Preview"
 						aria-label="{{ site.app_name }} App Preview">
+						<source src="{{ site.video_mp4 | relative_url }}" type="video/mp4">
+						<source src="{{ site.video_hls }}" type="application/vnd.apple.mpegurl">
 					</video>
 				</div>
 				<button type="button" class="phone-expand">▶ Watch full-screen</button>
@@ -444,23 +446,14 @@
 		<video class="vfs-video" playsinline controls preload="none"></video>
 	</div>
 
-	<!-- App Preview video (HLS) -->
-	<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+	<!-- App Preview video (self-hosted mp4 for indexability + autoplay) -->
 	<script>
 		(function () {
 			var v = document.querySelector('.hero-video');
 			if (!v) return;
-			var src = v.dataset.hls;
+			var src = "{{ site.video_mp4 | relative_url }}";
 			function play() { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
-			if (v.canPlayType('application/vnd.apple.mpegurl')) {
-				v.src = src; v.addEventListener('loadedmetadata', play);
-			} else if (window.Hls && Hls.isSupported()) {
-				var hls = new Hls({ capLevelToPlayerSize: true });
-				hls.loadSource(src); hls.attachMedia(v);
-				hls.on(Hls.Events.MANIFEST_PARSED, play);
-			} else {
-				v.src = src; play();
-			}
+			play();
 
 			// ----- Immersive video player -----
 			// Desktop: no full-screen affordance (inline video only).
@@ -475,9 +468,7 @@
 
 			function attach() {
 				if (loaded || !fsv) return; loaded = true;
-				if (fsv.canPlayType('application/vnd.apple.mpegurl')) { fsv.src = src; }
-				else if (window.Hls && Hls.isSupported()) { var h = new Hls(); h.loadSource(src); h.attachMedia(fsv); }
-				else { fsv.src = src; }
+				fsv.src = src;
 			}
 			function show(mode) {
 				attach();
